@@ -1,10 +1,9 @@
--- @atlcompiler emftvm
 -- @path Families=/Test/Families.ecore
 -- @path Persons=/Test/Persons.ecore
 
 module Families2Persons;
 
-create OUT: Persons, trace: Trace from IN: Families;
+create OUT: Persons from IN: Families;
 
 helper context Families!Member def: isFemale(): Boolean =
 	if not self.familyMother.oclIsUndefined() then
@@ -49,4 +48,3 @@ rule Member2Female {
 			fullName <- s.firstName + ' ' + s.familyName
 		)
 }
-

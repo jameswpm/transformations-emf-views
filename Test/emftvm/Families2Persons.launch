@@ -11,15 +11,18 @@
     <mapAttribute key="Model Handler">
         <mapEntry key="Families" value="EMF"/>
         <mapEntry key="Persons" value="EMF"/>
+        <mapEntry key="Trace" value="EMF"/>
     </mapAttribute>
     <mapAttribute key="ModelType">
         <mapEntry key="Families" value="METAMODELINPUT"/>
         <mapEntry key="IN" value="MODELINPUT"/>
         <mapEntry key="OUT" value="MODELOUTPUT"/>
         <mapEntry key="Persons" value="METAMODELOUTPUT"/>
+        <mapEntry key="Trace" value="METAMODELOUTPUT"/>
+        <mapEntry key="trace" value="MODELOUTPUT"/>
     </mapAttribute>
     <mapAttribute key="Options">
-        <mapEntry key="OPTION_CLEAR" value="false"/>
+        <mapEntry key="OPTION_CLEAR" value="true"/>
         <mapEntry key="OPTION_CONTENT_TYPE" value="false"/>
         <mapEntry key="OPTION_DERIVED" value="true"/>
         <mapEntry key="allowInterModelReferences" value="false"/>
@@ -31,15 +34,19 @@
     </listAttribute>
     <listAttribute key="OrderedOutput">
         <listEntry value="OUT"/>
+        <listEntry value="trace"/>
     </listAttribute>
     <mapAttribute key="Output">
         <mapEntry key="OUT" value="Persons"/>
+        <mapEntry key="trace" value="Trace"/>
     </mapAttribute>
     <mapAttribute key="Path">
         <mapEntry key="Families" value="/Test/Families.ecore"/>
         <mapEntry key="IN" value="/Test/sample-Families.xmi"/>
         <mapEntry key="OUT" value="/Test/person-emftvm.xmi"/>
         <mapEntry key="Persons" value="/Test/Persons.ecore"/>
+        <mapEntry key="Trace" value="uri:http://www.eclipse.org/m2m/atl/emftvm/2011/Trace"/>
+        <mapEntry key="trace" value="/Test/emftvm/traces.xmi"/>
     </mapAttribute>
     <listAttribute key="Superimpose"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
