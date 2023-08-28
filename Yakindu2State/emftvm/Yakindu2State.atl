@@ -5,12 +5,12 @@
 -- ATL Transformation for Yakindu to Statecharts
 module Yakindu2State;
 
-create OUT: Statechart from IN: Yakindu;
+create OUT: Statechart, trace: Trace from IN: Yakindu;
 
--- Rule to map Statechart to StateMachine
-rule StatechartToStateMachine {
+-- Rule to map State to State
+rule StateToState {
     from
-        src: Yakindu!Region
+        src: Yakindu!State
     to
-        dest: Statechart!Transition
+        dest: Statechart!State
 }
