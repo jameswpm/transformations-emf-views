@@ -7,7 +7,7 @@
     <eClassifiers xsi:type="ecore:EDataType" name="Boolean"/>
     <eClassifiers xsi:type="ecore:EDataType" name="Double"/>
   </ecore:EPackage>
-  <ecore:EPackage name="Statecharts" nsURI="http://statecharts" nsPrefix="http://statecharts">
+  <ecore:EPackage name="Statecharts" nsURI="statecharts" nsPrefix="statecharts">
     <eClassifiers xsi:type="ecore:EClass" name="BooleanExpression">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
           unique="false" lowerBound="1" eType="#/0/String"/>

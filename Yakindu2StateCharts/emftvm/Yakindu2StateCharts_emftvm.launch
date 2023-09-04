@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.m2m.atl.adt.launching.atlTransformation">
-    <stringAttribute key="ATL File Name" value="/Yakindu2State/emftvm/Yakindu2State.atl"/>
+    <stringAttribute key="ATL File Name" value="/Yakindu2StateCharts/emftvm/Yakindu2StateCharts.atl"/>
     <stringAttribute key="ATL VM" value="EMFTVM"/>
     <stringAttribute key="ATL_COMPILER" value="emftvm"/>
     <booleanAttribute key="IS_REFINING" value="false"/>
@@ -9,14 +9,14 @@
     </mapAttribute>
     <mapAttribute key="Libs"/>
     <mapAttribute key="Model Handler">
-        <mapEntry key="Statechart" value="EMF"/>
+        <mapEntry key="Statecharts" value="EMF"/>
         <mapEntry key="Trace" value="EMF"/>
         <mapEntry key="Yakindu" value="EMF"/>
     </mapAttribute>
     <mapAttribute key="ModelType">
         <mapEntry key="IN" value="MODELINPUT"/>
         <mapEntry key="OUT" value="MODELOUTPUT"/>
-        <mapEntry key="Statechart" value="METAMODELOUTPUT"/>
+        <mapEntry key="Statecharts" value="METAMODELOUTPUT"/>
         <mapEntry key="Trace" value="METAMODELOUTPUT"/>
         <mapEntry key="Yakindu" value="METAMODELINPUT"/>
         <mapEntry key="trace" value="MODELOUTPUT"/>
@@ -37,16 +37,16 @@
         <listEntry value="trace"/>
     </listAttribute>
     <mapAttribute key="Output">
-        <mapEntry key="OUT" value="Statechart"/>
+        <mapEntry key="OUT" value="Statecharts"/>
         <mapEntry key="trace" value="Trace"/>
     </mapAttribute>
     <mapAttribute key="Path">
         <mapEntry key="IN" value="/Yakindu2State/models/yakindu.xmi"/>
-        <mapEntry key="OUT" value="/Yakindu2State/models/state-emftvm.xmi"/>
-        <mapEntry key="Statechart" value="/Yakindu2State/statecharts.ecore"/>
+        <mapEntry key="OUT" value="/Yakindu2StateCharts/statecharts-emftvm.xmi"/>
+        <mapEntry key="Statecharts" value="ext:C:\Users\James\Projects\Eclipse\transformations-emf-views\Yakindu2State\statecharts.ecore"/>
         <mapEntry key="Trace" value="uri:http://www.eclipse.org/m2m/atl/emftvm/2011/Trace"/>
-        <mapEntry key="Yakindu" value="/Yakindu2State/yakindu.ecore"/>
-        <mapEntry key="trace" value="/Yakindu2State/emftvm/traces.xmi"/>
+        <mapEntry key="Yakindu" value="uri:hu.bme.mit.inf.yakindumm"/>
+        <mapEntry key="trace" value="/Yakindu2StateCharts/emftvm/trace.xmi"/>
     </mapAttribute>
     <listAttribute key="Superimpose"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>

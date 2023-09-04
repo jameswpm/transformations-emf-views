@@ -1,6 +1,6 @@
 -- @atlcompiler emftvm
 -- @nsURI Yakindu=hu.bme.mit.inf.yakindumm
--- @nsURI Statechart=http://statecharts
+-- @nsURI Statechart=statecharts
 
 -- ATL Transformation for Yakindu to Statecharts
 module Yakindu2State;

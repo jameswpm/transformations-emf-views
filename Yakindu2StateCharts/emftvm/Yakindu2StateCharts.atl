@@ -1,0 +1,65 @@
+-- @atlcompiler emftvm
+-- @nsURI Yakindu=hu.bme.mit.inf.yakindumm
+-- @nsURI Statechart=statecharts
+
+-- ATL Transformation for Yakindu to Statecharts
+module YakinduToStateCharts;
+
+create OUT : Statecharts, trace: Trace from IN : Yakindu;
+
+--  Pseudostate to StateVertex
+rule PseudostateToStateVertex {
+    from
+        src: Yakindu!Pseudostate
+    to
+        target: Statecharts!StateVertex 
+}
+
+--  Statechart to StateMachine
+rule StatechartToStateMachine {
+    from
+        src: Yakindu!Statechart
+    to
+        target: Statecharts!StateMachine 
+}
+
+--  State to State
+rule StateToState {
+    from
+        src: Yakindu!State
+    to
+        target: Statecharts!State 
+}
+
+--  RegularState to CompositeState
+-- rule RegularStateToCompositeState {
+--from
+--        src: Yakindu!RegularState
+  --  to
+    --    target: Statecharts!CompositeState 
+--}
+
+
+--  Exit to State
+rule ExitToState {
+    from
+        src: Yakindu!Exit
+    to
+        target: Statecharts!State 
+}
+
+--  FinalState to State
+rule FinalStateToState {
+    from
+        src: Yakindu!FinalState
+    to
+        target: Statecharts!State 
+}
+
+--  Transition to Transition
+rule TransitionToTransition {
+    from
+        src: Yakindu!Transition
+    to
+        target: Statecharts!Transition 
+}
