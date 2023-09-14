@@ -41,12 +41,12 @@
         <mapEntry key="trace" value="Trace"/>
     </mapAttribute>
     <mapAttribute key="Path">
-        <mapEntry key="IN" value="/Yakindu2State/models/yakindu.xmi"/>
-        <mapEntry key="OUT" value="/Yakindu2StateCharts/statecharts-emftvm.xmi"/>
-        <mapEntry key="Statecharts" value="ext:C:\Users\James\Projects\Eclipse\transformations-emf-views\Yakindu2State\statecharts.ecore"/>
+        <mapEntry key="IN" value="/resources/models/yakindu.xmi"/>
+        <mapEntry key="OUT" value="/resources/models/statecharts-emftvm.xmi"/>
+        <mapEntry key="Statecharts" value="uri:statecharts"/>
         <mapEntry key="Trace" value="uri:http://www.eclipse.org/m2m/atl/emftvm/2011/Trace"/>
         <mapEntry key="Yakindu" value="uri:hu.bme.mit.inf.yakindumm"/>
-        <mapEntry key="trace" value="/Yakindu2StateCharts/emftvm/trace.xmi"/>
+        <mapEntry key="trace" value="/Yakindu2StateCharts/emftvm/traces.xmi"/>
     </mapAttribute>
     <listAttribute key="Superimpose"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>

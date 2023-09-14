@@ -2,17 +2,28 @@
 -- @nsURI Yakindu=hu.bme.mit.inf.yakindumm
 -- @nsURI Statechart=statecharts
 
--- ATL Transformation for Yakindu to Statecharts
+-- ATL Transformation for Yakindu to Statecharts, considering only the transformation between States
 module YakinduToStateCharts;
 
 create OUT : Statecharts, trace: Trace from IN : Yakindu;
 
---  Pseudostate to StateVertex
-rule PseudostateToStateVertex {
+
+--  Transition to Transition
+rule TransitionToTransition {
     from
-        src: Yakindu!Pseudostate
+        src: Yakindu!Transition
     to
-        target: Statecharts!StateVertex 
+        target: Statecharts!Transition
+}
+
+--  Vertex to StateVertex, excluding the StateChart
+rule VertexToStateVertex {
+    from
+        src: Yakindu!Vertex (not src.isStateChart())
+    to
+        target: Statecharts!StateVertex (
+			incoming <- src.incomingTransitions
+		)
 }
 
 --  Statechart to StateMachine
@@ -20,16 +31,20 @@ rule StatechartToStateMachine {
     from
         src: Yakindu!Statechart
     to
-        target: Statecharts!StateMachine 
+        target: Statecharts!StateMachine(
+            top <- src.regions->iterate(r; acc: OrderedSet(Yakindu!Vertex) = OrderedSet{} | acc->union(r.vertices->asOrderedSet()))
+		)
 }
 
+
+
 --  State to State
-rule StateToState {
-    from
-        src: Yakindu!State
-    to
-        target: Statecharts!State 
-}
+--rule StateToState {
+--    from
+ --       src: Yakindu!State
+   -- to
+    --    target: Statecharts!State 
+--}
 
 --  RegularState to CompositeState
 -- rule RegularStateToCompositeState {
@@ -41,25 +56,31 @@ rule StateToState {
 
 
 --  Exit to State
-rule ExitToState {
-    from
-        src: Yakindu!Exit
-    to
-        target: Statecharts!State 
-}
+--rule ExitToState {
+ --   from
+  --      src: Yakindu!Exit
+   -- to
+    --    target: Statecharts!State 
+--}
 
 --  FinalState to State
-rule FinalStateToState {
-    from
-        src: Yakindu!FinalState
-    to
-        target: Statecharts!State 
-}
+--rule FinalStateToState {
+ --   from
+  --      src: Yakindu!FinalState
+   -- to
+    --    target: Statecharts!State 
+--}
 
 --  Transition to Transition
-rule TransitionToTransition {
-    from
-        src: Yakindu!Transition
-    to
-        target: Statecharts!Transition 
-}
+--rule TransitionToTransition {
+ --   from
+  --      src: Yakindu!Transition
+   -- to
+    --    target: Statecharts!Transition 
+--}
+
+helper context Yakindu!Vertex def: isStateChart(): Boolean =
+	self.oclIsKindOf(Yakindu!Statechart);
+
+--helper context Yakindu!Vertex def: hasRegions(): Boolean =
+--	self.eContainer().oclIsKindOf(Yakindu!Statechart);
