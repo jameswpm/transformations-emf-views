@@ -21,7 +21,7 @@ rule VertexToStateVertex {
     from
         src: Yakindu!Vertex (not src.isStateChart())
     to
-        target: Statecharts!StateVertex (
+        target: Statecharts!State (
 			incoming <- src.incomingTransitions
 		)
 }

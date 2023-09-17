@@ -9,29 +9,28 @@ class Metamodels():
         """_summary_
         """
         self.resource_set = ResourceSet()
-        self.modeling_resources_path = glob.glob(path)[0]
+        self.metamodels_resources_path = glob.glob(path)[0]
 
     def register(self):
         """_summary_
         """
-        directory = osp.join(self.modeling_resources_path, 'metamodels')
-        files = listdir(directory)
-        ecore_paths = [f for f in files if osp.isfile(osp.join(directory,f))]
+        files = listdir(self.metamodels_resources_path)
+        ecore_paths = [f for f in files if osp.isfile(osp.join(self.metamodels_resources_path, f))]
         
         for ecore_file in ecore_paths:
 
-            ecore_path = osp.join(directory,ecore_file)
+            ecore_path = osp.join(self.metamodels_resources_path, ecore_file)
             resource_path = self.resource_set.get_resource(URI(ecore_path))
-            root_pkg = resource_path.contents[0]
-            
-            if hasattr(root_pkg, 'nsURI') and root_pkg.nsURI != "":
-                self.resource_set.metamodel_registry[root_pkg.nsURI] = root_pkg
-            
-            contents = root_pkg.eContents
-
-            for content in contents:
+            for content in resource_path.contents:
+                                
                 if hasattr(content, 'nsURI') and content.nsURI != "":
                     self.resource_set.metamodel_registry[content.nsURI] = content
+                
+                contents = content.eContents
+
+                for content in contents:
+                    if hasattr(content, 'nsURI') and content.nsURI != "":
+                        self.resource_set.metamodel_registry[content.nsURI] = content
 
     def get_resource_set(self):
         """_summary_
