@@ -19,6 +19,8 @@ class Enconder():
 
     def xmi_to_graph(self, model_root_left, model_root_right, model_traces_path = None):
         data = HeteroData()
+        node_features = {}
+        edge_features = {}
 
         # Left_wrapper = {}
         # Right_wrapper = {}
@@ -89,7 +91,13 @@ class Enconder():
         # data[class_right].num_nodes = len(right_mapping)
         # data[class_right].node_id = torch.Tensor(list(right_mapping.values())).long()
 
-        self._traverse_emf_model(model_root_left.contents[0])
+        #self._traverse_emf_model(model_root_left.contents[0])
+        # Start the traversal from the root element
+        data_left = self._create_hetero_data_from_emf_model(model_root_left.contents[0])
+        print(data_left)
+        
+      
+        
         
         # edge_index, edge_label = self._load_edges(
         #     src_index_col=left_id,
@@ -110,16 +118,92 @@ class Enconder():
     
     def _traverse_emf_model(self, element, indent=0):
         """Recursively traverse an EMF model."""
-        # Print the current element with appropriate indentation
         print("  " * indent + str(element))
 
-        # Check if the element has children (containment references)
-        for containment_ref in element.eClass.eAllContainments():
-            child_elements = getattr(element, containment_ref.name)
-            if child_elements:
+        # Access and traverse the child elements using eContents
+        for child_element in element.eContents:
+            self._traverse_emf_model(child_element, indent + 1)
+
+    def _create_hetero_data_from_emf_model(self, root_element):
+        hetero_data = HeteroData()
+
+        # Initialize dictionaries to store node and edge features for each type
+        node_features = {}
+        edge_features = {}
+
+        # Recursive function to traverse the EMF model and add nodes and edges
+        def traverse_and_add(element, node_id):
+            # Determine the node type based on the element's EClass
+            node_type = element.eClass.name
+
+            # Add the current element as a node
+            node_features[node_id] = {'type': node_type, 'element': element}
+            if hetero_data[node_type].num_nodes is None:
+                hetero_data[node_type].num_nodes = 0
+            hetero_data[node_type].num_nodes += 1
+
+            # Iterate through containment references
+            for containment_ref in element.eContents:
+                # Determine the edge type based on the containment reference's EReference
+                edge_type = containment_ref.eContainingFeature.name
+
+                # Add an edge for the containment relation
+                edge_id = hetero_data[edge_type].num_edges
+                source = node_id
+                target = hetero_data[containment_ref.eType.name].num_nodes
+                edge_features[edge_id] = {'type': edge_type, 'source': source, 'target': target}
+                if hetero_data[edge_type].num_edges is None:
+                    hetero_data[edge_type].num_edges = 0
+                hetero_data[edge_type].num_edges += 1
+
                 # Recursively traverse child elements
-                for child_element in child_elements:
-                    self._traverse_emf_model(child_element, indent + 1)
+                traverse_and_add(containment_ref, target)
+
+        # Start the traversal from the root element
+        traverse_and_add(root_element, node_id=0)
+
+        # Convert node and edge features to PyTorch tensors
+        for node_id, features in node_features.items():
+            node_type = features['type']
+            hetero_data[node_type].x.append(torch.tensor([node_id], dtype=torch.float))
+            hetero_data[node_type].element_list.append(features['element'])
+
+        for edge_id, features in edge_features.items():
+            edge_type = features['type']
+            source, target = features['source'], features['target']
+            hetero_data[edge_type].edge_index.append(torch.tensor([[source], [target]], dtype=torch.long))
+
+        return hetero_data
+    
+    # def _traverse_and_add(self, element):
+    #     # Determine the node type based on the element's EClass
+    #     node_type = element.eClass.name
+
+    #     # Add the current element as a node
+    #     node_id = hetero_data[node_type].num_nodes
+    #     node_features[node_id] = {'type': node_type, 'element': element}
+    #     hetero_data[node_type].num_nodes += 1
+
+    #     # Iterate through containment references
+    #     for containment_ref in element.eContents:
+    #         # Determine the edge type based on the containment reference's EReference
+    #         edge_type = containment_ref.eContainingFeature.name
+
+    #         # Add an edge for the containment relation
+    #         edge_id = hetero_data[edge_type].num_edges
+    #         source = node_id
+    #         target = hetero_data[containment_ref.eType.name].num_nodes
+    #         edge_features[edge_id] = {'type': edge_type, 'source': source, 'target': target}
+    #         hetero_data[edge_type].num_edges += 1
+
+    #         # Recursively traverse child elements
+    #         traverse_and_add(containment_ref)
+
+    
+
+    
+
+    # return hetero_data
 
     def _load_nodes(self, class_name, df, features_for_embedding) -> Tuple[torch.Tensor, dict]:
         """
