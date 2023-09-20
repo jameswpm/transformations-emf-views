@@ -265,6 +265,10 @@ replay_pid*
 # EMF Views #
 **/src-gen
 
+# Temporary models#
+**/models/temp/**
+!**/models/temp/**/.gitkeep
+
 #Figures
 # **/figures
 

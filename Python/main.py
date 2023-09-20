@@ -22,10 +22,13 @@ graph_encoder = Enconder(embeddings_information=None)
 xmi_path_left = osp.join(RESOURCES_PATH, 'models', 'yakindu.xmi')
 m_resource_left = resource_set.get_resource(URI(xmi_path_left))
 m_resource_left.use_uuid = True
+# #save resource with UUIDs at temporary directory
+# m_resource_left.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'yakindu.xmi')))
 
 xmi_path_right = osp.join(RESOURCES_PATH, 'models', 'statecharts-emftvm.xmi')
 m_resource_right = resource_set.get_resource(URI(xmi_path_right))
-m_resource_right.use_uuid = True
+# m_resource_right.use_uuid = True
+# m_resource_right.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'statecharts-emftvm.xmi')))
 
 # data, left_original_mapping, right_original_mapping = graph_encoder.xmi_to_graph(m_resource_left, m_resource_right)
 model_to_graph = Model2Graph()
