@@ -30,9 +30,17 @@ m_resource_right = resource_set.get_resource(URI(xmi_path_right))
 # m_resource_right.use_uuid = True
 # m_resource_right.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'statecharts-emftvm.xmi')))
 
-model_to_graph = Model2Graph()
-model_to_graph.get_graph_from_model(m_resource_left)
-print(model_to_graph.get_hetero_graph())
+#TODO: How to define the labels?
+model_to_graph_left = Model2Graph(label="Y")
+model_to_graph_left.get_graph_from_model(m_resource_left)
+
+model_to_graph_right = Model2Graph(label="S")
+model_to_graph_right.get_graph_from_model(m_resource_right)
+
+# merge the two graphs to be able to create trace links
+merged_graph = model_to_graph_left.get_hetero_graph().update(model_to_graph_right.get_hetero_graph())
+
+print(merged_graph)
 
 
 

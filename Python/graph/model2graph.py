@@ -7,13 +7,15 @@ from torch_geometric.data import HeteroData
 
 class Model2Graph():
 
-    def __init__(self):        
+    def __init__(self, label = None):        
         # Initialize a HeteroData object
         self.data = HeteroData()
         # Create list of dictionaries to store nodes, attributes and edges for different types
         self.nodes = {}
         self.nodes_attrs = {}
         self.edge_index = {}
+        if label is not None:
+            self.label = label
 
     def get_graph_from_model(self, model_resource, metafilter=None,
                             consider_attributtes=False):
@@ -34,6 +36,8 @@ class Model2Graph():
                 continue
             # Add node
             node_type = obj.eClass.name
+            if self.label is not None:
+                node_type = f'{self.label}_{node_type}'
             node_index = self._add_node(node_type, obj)       
 
             attributes = {}
@@ -55,6 +59,8 @@ class Model2Graph():
                                     (not metafilter.pass_filter_object(ref_obj))):
                                 continue
                             ref_obj_type = ref_obj.eClass.name
+                            if self.label is not None:
+                                ref_obj_type = f'{self.label}_{ref_obj_type}'
                             ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                             # Add edge
@@ -71,6 +77,8 @@ class Model2Graph():
                                 (not metafilter.pass_filter_object(ref_obj))):
                             continue
                         ref_obj_type = ref_obj.eClass.name
+                        if self.label is not None:
+                                ref_obj_type = f'{self.label}_{ref_obj_type}'
                         ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                         # Add edge
