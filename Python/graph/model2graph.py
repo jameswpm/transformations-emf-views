@@ -14,8 +14,7 @@ class Model2Graph():
         self.nodes = {}
         self.nodes_attrs = {}
         self.edge_index = {}
-        if label is not None:
-            self.label = label
+        self.label = label
 
     def get_graph_from_model(self, model_resource, metafilter=None,
                             consider_attributtes=False):

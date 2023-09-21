@@ -7,7 +7,6 @@ from graph.model2graph import Model2Graph
 
 #Internal
 from modeling.metamodels import Metamodels
-from graph.encoder import Enconder
 
 RESOURCES_PATH = osp.join(Path(__file__).parent, '..', 'resources')
 
@@ -17,8 +16,7 @@ metamodels.register()
 
 resource_set = metamodels.get_resource_set()
 
-graph_encoder = Enconder(embeddings_information=None)
-# Register the models in the resource set
+#For each of main models, get the graph representation
 xmi_path_left = osp.join(RESOURCES_PATH, 'models', 'yakindu.xmi')
 m_resource_left = resource_set.get_resource(URI(xmi_path_left))
 m_resource_left.use_uuid = True
@@ -40,7 +38,13 @@ model_to_graph_right.get_graph_from_model(m_resource_right)
 # merge the two graphs to be able to create trace links
 merged_graph = model_to_graph_left.get_hetero_graph().update(model_to_graph_right.get_hetero_graph())
 
-print(merged_graph)
+# get the graph of the trace model
+model_to_graph_traces = Model2Graph()
+xmi_path_traces = osp.join(RESOURCES_PATH, 'models', 'yakindu_stratecharts_traces.xmi')
+m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
+model_to_graph_traces.get_graph_from_model(m_resource_traces)
+
+print(model_to_graph_traces.get_hetero_graph())
 
 
 
