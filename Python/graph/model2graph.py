@@ -94,9 +94,19 @@ class Model2Graph():
             if consider_attributtes:
                 self._add_node_attributtes(node_type, node_index, attributes)
         
-        # # Convert edge lists and attributes to PyTorch tensors
-        # for edge_type in self.data.edge_types:
-        #     self.data[edge_type].edge_index = torch.tensor(self.data[edge_type].edge_index, dtype=torch.long).t().contiguous()
+        # Convert nodes to PyTorch tensors and set HeteroData
+        for node_type, node_list in self.nodes.items():
+            self.data[node_type].num_nodes = len(node_list)
+            self.data[node_type].node_id = torch.Tensor([item['id'] for item in node_list]).long()
+
+        # convert edges to PyTorch tensors
+        for edge_type, edge_list in self.edge_index.items():
+            self.data[edge_type].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+        
+        #TODO: Attributes not needed for the first experiments with transformations
+        # if consider_attributtes:
+        #     # convert attributtes to PyTorch tensors
+        
     
     def get_hetero_graph(self):
         return self.data
@@ -104,12 +114,18 @@ class Model2Graph():
     def _add_node(self, node_type, node):
         if node_type not in self.nodes:
             self.nodes[node_type] = []
-        if node not in self.nodes[node_type]:  
-            self.nodes[node_type].append(node)
-        #zero index and avoid empty lists
-        node_index = len(self.nodes[node_type]) - 1
 
-        return node_index
+        # Check if the node already exists based on its content
+        for existing_node_info in self.nodes[node_type]:
+            if existing_node_info["node"] == node:
+                return existing_node_info["id"]
+        
+        # If the node doesn't exist, add it
+        last_index = len(self.nodes[node_type])
+        node_info = {"id": last_index, "node": node}
+        self.nodes[node_type].append(node_info)
+
+        return last_index + 1
     
     def _add_node_attributtes(self, node_type, node_index, attr_list):
         if node_type not in self.nodes_attrs:
