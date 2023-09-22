@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="ASCII"?>
+<trace:TraceLinkSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http://www.eclipse.org/m2m/atl/emftvm/2011/Trace" defaultSourceElements="//@rules.0/@links.0/@sourceElements.0 //@rules.0/@links.1/@sourceElements.0 //@rules.0/@links.2/@sourceElements.0 //@rules.0/@links.3/@sourceElements.0 //@rules.0/@links.4/@sourceElements.0 //@rules.0/@links.5/@sourceElements.0 //@rules.0/@links.6/@sourceElements.0 //@rules.0/@links.7/@sourceElements.0 //@rules.0/@links.8/@sourceElements.0 //@rules.0/@links.9/@sourceElements.0 //@rules.0/@links.10/@sourceElements.0 //@rules.0/@links.11/@sourceElements.0 //@rules.0/@links.12/@sourceElements.0 //@rules.0/@links.13/@sourceElements.0 //@rules.0/@links.14/@sourceElements.0 //@rules.0/@links.15/@sourceElements.0 //@rules.0/@links.16/@sourceElements.0 //@rules.0/@links.17/@sourceElements.0 //@rules.0/@links.18/@sourceElements.0 //@rules.0/@links.19/@sourceElements.0 //@rules.0/@links.20/@sourceElements.0 //@rules.0/@links.21/@sourceElements.0 //@rules.0/@links.22/@sourceElements.0 //@rules.0/@links.23/@sourceElements.0 //@rules.0/@links.24/@sourceElements.0 //@rules.0/@links.25/@sourceElements.0 //@rules.0/@links.26/@sourceElements.0 //@rules.0/@links.27/@sourceElements.0 //@rules.0/@links.28/@sourceElements.0 //@rules.0/@links.29/@sourceElements.0 //@rules.0/@links.30/@sourceElements.0 //@rules.0/@links.31/@sourceElements.0 //@rules.0/@links.32/@sourceElements.0 //@rules.0/@links.33/@sourceElements.0 //@rules.0/@links.34/@sourceElements.0 //@rules.0/@links.35/@sourceElements.0 //@rules.0/@links.36/@sourceElements.0 //@rules.0/@links.37/@sourceElements.0 //@rules.0/@links.38/@sourceElements.0 //@rules.0/@links.39/@sourceElements.0 //@rules.0/@links.40/@sourceElements.0 //@rules.0/@links.41/@sourceElements.0 //@rules.0/@links.42/@sourceElements.0 //@rules.0/@links.43/@sourceElements.0 //@rules.0/@links.44/@sourceElements.0 //@rules.0/@links.45/@sourceElements.0 //@rules.0/@links.46/@sourceElements.0 //@rules.0/@links.47/@sourceElements.0 //@rules.0/@links.48/@sourceElements.0 //@rules.0/@links.49/@sourceElements.0 //@rules.0/@links.50/@sourceElements.0 //@rules.0/@links.51/@sourceElements.0 //@rules.0/@links.52/@sourceElements.0 //@rules.0/@links.53/@sourceElements.0 //@rules.0/@links.54/@sourceElements.0 //@rules.0/@links.55/@sourceElements.0 //@rules.0/@links.56/@sourceElements.0 //@rules.0/@links.57/@sourceElements.0 //@rules.0/@links.58/@sourceElements.0 //@rules.0/@links.59/@sourceElements.0 //@rules.0/@links.60/@sourceElements.0 //@rules.0/@links.61/@sourceElements.0 //@rules.0/@links.62/@sourceElements.0 //@rules.0/@links.63/@sourceElements.0 //@rules.0/@links.64/@sourceElements.0 //@rules.1/@links.0/@sourceElements.0 //@rules.1/@links.1/@sourceElements.0 //@rules.1/@links.2/@sourceElements.0 //@rules.1/@links.3/@sourceElements.0 //@rules.1/@links.4/@sourceElements.0 //@rules.1/@links.5/@sourceElements.0 //@rules.1/@links.6/@sourceElements.0 //@rules.1/@links.7/@sourceElements.0 //@rules.1/@links.8/@sourceElements.0 //@rules.1/@links.9/@sourceElements.0 //@rules.1/@links.10/@sourceElements.0 //@rules.1/@links.11/@sourceElements.0 //@rules.1/@links.12/@sourceElements.0 //@rules.1/@links.13/@sourceElements.0 //@rules.1/@links.14/@sourceElements.0 //@rules.1/@links.15/@sourceElements.0 //@rules.1/@links.16/@sourceElements.0 //@rules.1/@links.17/@sourceElements.0 //@rules.1/@links.18/@sourceElements.0 //@rules.1/@links.19/@sourceElements.0 //@rules.1/@links.20/@sourceElements.0 //@rules.1/@links.21/@sourceElements.0 //@rules.1/@links.22/@sourceElements.0 //@rules.1/@links.23/@sourceElements.0 //@rules.1/@links.24/@sourceElements.0 //@rules.1/@links.25/@sourceElements.0 //@rules.1/@links.26/@sourceElements.0 //@rules.1/@links.27/@sourceElements.0 //@rules.1/@links.28/@sourceElements.0 //@rules.1/@links.29/@sourceElements.0 //@rules.1/@links.30/@sourceElements.0 //@rules.1/@links.31/@sourceElements.0 //@rules.1/@links.32/@sourceElements.0 //@rules.1/@links.33/@sourceElements.0 //@rules.1/@links.34/@sourceElements.0 //@rules.1/@links.35/@sourceElements.0 //@rules.2/@links.0/@sourceElements.0">
+  <rules rule="TransitionToTransition">
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.0/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/0"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.1/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/1"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.1/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/2"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.2/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/3"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.2/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/4"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.2/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/5"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.3/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/6"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.3/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/7"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.3/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/8"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.4/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/9"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.4/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/10"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.4/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/11"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.5/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/12"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.5/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/13"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.5/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/14"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.6/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/15"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.6/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/16"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.7/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/17"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.7/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/18"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.8/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/19"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.8/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/20"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.9/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/21"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.9/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/22"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.10/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/23"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.10/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/24"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.11/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/25"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.11/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/26"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.12/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/27"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.12/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/28"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.13/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/29"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.13/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/30"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.1/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/31"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.0/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/32"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.1/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/33"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.2/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/34"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.2/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/35"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.2/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/36"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.3/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/37"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.3/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/38"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.3/@outgoingTransitions.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/39"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.4/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/40"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.5/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/41"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.6/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/42"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.6/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/43"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.7/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/44"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.7/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/45"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.8/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/46"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.9/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/47"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.9/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/48"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.10/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/49"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.10/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/50"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.11/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/51"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.11/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/52"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.12/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/53"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.12/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/54"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.13/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/55"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.13/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/56"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.14/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/57"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.15/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/58"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.15/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/59"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.16/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/60"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.17/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/61"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.17/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/62"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.18/@outgoingTransitions.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/63"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.18/@outgoingTransitions.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/64"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="VertexToStateVertex">
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/98/@top.0"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/65"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/66"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/67"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.3"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/68"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.4"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/69"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.5"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/70"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.6"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/71"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.7"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/72"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.8"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/73"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.9"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/74"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.10"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/75"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.11"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/76"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.12"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/77"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.0/@regions.0/@vertices.13"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/78"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/98/@top.1"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/98/@top.2"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.0"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/79"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.1"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/80"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.2"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/81"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.3"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/82"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.4"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/83"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.5"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/84"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.6"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/85"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.7"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/86"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.8"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/87"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.9"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/88"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.10"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/89"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.11"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/90"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.12"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/91"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.13"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/92"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.14"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/93"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.15"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/94"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.16"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/95"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.17"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/96"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#//@regions.0/@vertices.2/@regions.0/@vertices.18"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/97"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="StatechartToStateMachine">
+    <links>
+      <sourceElements name="src" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/206.xmi#/"/>
+      </sourceElements>
+      <targetElements name="target">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/206.xmi#/98"/>
+      </targetElements>
+    </links>
+  </rules>
+</trace:TraceLinkSet>

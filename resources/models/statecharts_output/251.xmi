@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:statecharts="statecharts">
+  <statecharts:Transition source="/81/@top.0" target="/81/@top.1"/>
+  <statecharts:Transition source="/81/@top.0" target="/81/@top.18"/>
+  <statecharts:Transition source="/81/@top.1" target="/81/@top.2"/>
+  <statecharts:Transition source="/81/@top.1" target="/81/@top.6"/>
+  <statecharts:Transition source="/81/@top.1" target="/81/@top.7"/>
+  <statecharts:Transition source="/81/@top.2" target="/81/@top.3"/>
+  <statecharts:Transition source="/81/@top.2" target="/81/@top.11"/>
+  <statecharts:Transition source="/81/@top.2" target="/81/@top.12"/>
+  <statecharts:Transition source="/81/@top.3" target="/81/@top.13"/>
+  <statecharts:Transition source="/81/@top.3" target="/81/@top.4"/>
+  <statecharts:Transition source="/81/@top.3" target="/81/@top.14"/>
+  <statecharts:Transition source="/81/@top.4" target="/81/@top.16"/>
+  <statecharts:Transition source="/81/@top.4" target="/81/@top.9"/>
+  <statecharts:Transition source="/81/@top.4" target="/81/@top.10"/>
+  <statecharts:Transition source="/81/@top.5" target="/81/@top.15"/>
+  <statecharts:Transition source="/81/@top.5" target="/81/@top.17"/>
+  <statecharts:Transition source="/81/@top.6" target="/81/@top.1"/>
+  <statecharts:Transition source="/81/@top.6" target="/81/@top.1"/>
+  <statecharts:Transition source="/81/@top.7" target="/81/@top.1"/>
+  <statecharts:Transition source="/81/@top.7" target="/81/@top.1"/>
+  <statecharts:Transition source="/81/@top.8" target="/81/@top.0"/>
+  <statecharts:Transition source="/81/@top.9" target="/81/@top.4"/>
+  <statecharts:Transition source="/81/@top.9" target="/81/@top.4"/>
+  <statecharts:Transition source="/81/@top.10" target="/81/@top.4"/>
+  <statecharts:Transition source="/81/@top.10" target="/81/@top.4"/>
+  <statecharts:Transition source="/81/@top.11" target="/81/@top.2"/>
+  <statecharts:Transition source="/81/@top.11" target="/81/@top.2"/>
+  <statecharts:Transition source="/81/@top.12" target="/81/@top.2"/>
+  <statecharts:Transition source="/81/@top.12" target="/81/@top.2"/>
+  <statecharts:Transition source="/81/@top.13" target="/81/@top.3"/>
+  <statecharts:Transition source="/81/@top.13" target="/81/@top.3"/>
+  <statecharts:Transition source="/81/@top.14" target="/81/@top.3"/>
+  <statecharts:Transition source="/81/@top.14" target="/81/@top.3"/>
+  <statecharts:Transition source="/81/@top.15" target="/81/@top.5"/>
+  <statecharts:Transition source="/81/@top.15" target="/81/@top.17"/>
+  <statecharts:Transition source="/81/@top.16" target="/81/@top.15"/>
+  <statecharts:Transition source="/81/@top.16" target="/81/@top.5"/>
+  <statecharts:Transition source="/81/@top.17" target="/81/@top.0"/>
+  <statecharts:Transition source="/81/@top.18" target="/81/@top.0"/>
+  <statecharts:Transition source="/67" target="/68"/>
+  <statecharts:Transition source="/68" target="/69"/>
+  <statecharts:Transition source="/68" target="/70"/>
+  <statecharts:Transition source="/69" target="/71"/>
+  <statecharts:Transition source="/69" target="/73"/>
+  <statecharts:Transition source="/69" target="/69"/>
+  <statecharts:Transition source="/70" target="/70"/>
+  <statecharts:Transition source="/70" target="/72"/>
+  <statecharts:Transition source="/70" target="/74"/>
+  <statecharts:Transition source="/71" target="/75"/>
+  <statecharts:Transition source="/71" target="/76"/>
+  <statecharts:Transition source="/72" target="/79"/>
+  <statecharts:Transition source="/72" target="/78"/>
+  <statecharts:Transition source="/73" target="/81/@top.19"/>
+  <statecharts:Transition source="/73" target="/69"/>
+  <statecharts:Transition source="/74" target="/70"/>
+  <statecharts:Transition source="/74" target="/81/@top.19"/>
+  <statecharts:Transition source="/75" target="/70"/>
+  <statecharts:Transition source="/75" target="/77"/>
+  <statecharts:Transition source="/76" target="/70"/>
+  <statecharts:Transition source="/76" target="/77"/>
+  <statecharts:Transition source="/77" target="/70"/>
+  <statecharts:Transition source="/78" target="/69"/>
+  <statecharts:Transition source="/78" target="/80"/>
+  <statecharts:Transition source="/79" target="/80"/>
+  <statecharts:Transition source="/79" target="/69"/>
+  <statecharts:Transition source="/80" target="/69"/>
+  <statecharts:Transition source="/81/@top.19" target="/81/@top.0"/>
+  <statecharts:State outgoing="/39"/>
+  <statecharts:State outgoing="/40 /41" incoming="/39"/>
+  <statecharts:State outgoing="/42 /43 /44" incoming="/40 /44 /53 /61 /64 /65"/>
+  <statecharts:State outgoing="/45 /46 /47" incoming="/41 /45 /54 /56 /58 /60"/>
+  <statecharts:State outgoing="/48 /49" incoming="/42"/>
+  <statecharts:State outgoing="/50 /51" incoming="/46"/>
+  <statecharts:State outgoing="/52 /53" incoming="/43"/>
+  <statecharts:State outgoing="/54 /55" incoming="/47"/>
+  <statecharts:State outgoing="/56 /57" incoming="/48"/>
+  <statecharts:State outgoing="/58 /59" incoming="/49"/>
+  <statecharts:State outgoing="/60" incoming="/57 /59"/>
+  <statecharts:State outgoing="/61 /62" incoming="/51"/>
+  <statecharts:State outgoing="/63 /64" incoming="/50"/>
+  <statecharts:State outgoing="/65" incoming="/62 /63"/>
+  <statecharts:StateMachine>
+    <top outgoing="/0 /1" incoming="/20 /37 /38 /66"/>
+    <top outgoing="/2 /3 /4" incoming="/0 /16 /17 /18 /19"/>
+    <top outgoing="/5 /6 /7" incoming="/2 /25 /26 /27 /28"/>
+    <top outgoing="/8 /9 /10" incoming="/5 /29 /30 /31 /32"/>
+    <top outgoing="/11 /12 /13" incoming="/9 /21 /22 /23 /24"/>
+    <top outgoing="/14 /15" incoming="/33 /36"/>
+    <top outgoing="/16 /17" incoming="/3"/>
+    <top outgoing="/18 /19" incoming="/4"/>
+    <top outgoing="/20"/>
+    <top outgoing="/21 /22" incoming="/12"/>
+    <top outgoing="/23 /24" incoming="/13"/>
+    <top outgoing="/25 /26" incoming="/6"/>
+    <top outgoing="/27 /28" incoming="/7"/>
+    <top outgoing="/29 /30" incoming="/8"/>
+    <top outgoing="/31 /32" incoming="/10"/>
+    <top outgoing="/33 /34" incoming="/14 /35"/>
+    <top outgoing="/35 /36" incoming="/11"/>
+    <top outgoing="/37" incoming="/15 /34"/>
+    <top outgoing="/38" incoming="/1"/>
+    <top outgoing="/66" incoming="/52 /55"/>
+  </statecharts:StateMachine>
+</xmi:XMI>
