@@ -37,7 +37,7 @@ class Model2Graph():
             # Add node
             node_type = obj.eClass.name
             if self.label is not None:
-                node_type = f'{self.label}_{node_type}'
+                node_type = f'{self.label}-{node_type}'
             node_index = self._add_node(node_type, obj)       
 
             attributes = {}
@@ -60,11 +60,11 @@ class Model2Graph():
                                 continue
                             ref_obj_type = ref_obj.eClass.name
                             if self.label is not None:
-                                ref_obj_type = f'{self.label}_{ref_obj_type}'
+                                ref_obj_type = f'{self.label}-{ref_obj_type}'
                             ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                             # Add edge
-                            self._add_edge(f'{node_type}_{f.name}_{ref_obj_type}', node_index, ref_node_index)
+                            self._add_edge(f'{node_type}|{f.name}|{ref_obj_type}', node_index, ref_node_index)
                             
                     else:
                         ref_obj = obj.eGet(f)
@@ -78,13 +78,13 @@ class Model2Graph():
                             continue
                         ref_obj_type = ref_obj.eClass.name
                         if self.label is not None:
-                                ref_obj_type = f'{self.label}_{ref_obj_type}'
+                                ref_obj_type = f'{self.label}-{ref_obj_type}'
                         ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                         # Add edge
-                        self._add_edge(f'{node_type}_{f.name}_{ref_obj_type}', node_index, ref_node_index)
+                        self._add_edge(f'{node_type}|{f.name}|{ref_obj_type}', node_index, ref_node_index)
                 # attributes
-                elif isinstance(f, EAttribute): #TODO: It lacks some test with models including attributes
+                elif isinstance(f, EAttribute): #TODO: It lacks some test with models including attributes. Not necessary for first experiments
                     if f.many:
                         list_attr_val = []
                         for ref_attr in obj.eGet(f):
@@ -109,7 +109,8 @@ class Model2Graph():
 
         # convert edges to PyTorch tensors
         for edge_type, edge_list in self.edge_index.items():
-            self.data[edge_type].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+            src_name, rel_name, tgt_name = edge_type.split('|')
+            self.data[src_name, rel_name, tgt_name].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
         
         #TODO: Attributes not needed for the first experiments with transformations
         # if consider_attributtes:
