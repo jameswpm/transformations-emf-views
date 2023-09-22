@@ -13,7 +13,10 @@ rule TransitionToTransition {
     from
         src: Yakindu!Transition
     to
-        target: Statecharts!Transition
+        target: Statecharts!Transition (
+        	target <- src.target,
+			source <- src.source
+        )
 }
 
 --  Vertex to StateVertex, excluding the StateChart
@@ -21,9 +24,8 @@ rule VertexToStateVertex {
     from
         src: Yakindu!Vertex (not src.isStateChart())
     to
-        target: Statecharts!State (
-			incoming <- src.incomingTransitions
-		)
+        target: Statecharts!State 
+		
 }
 
 --  Statechart to StateMachine
@@ -32,7 +34,8 @@ rule StatechartToStateMachine {
         src: Yakindu!Statechart
     to
         target: Statecharts!StateMachine(
-            top <- src.regions->iterate(r; acc: OrderedSet(Yakindu!Vertex) = OrderedSet{} | acc->union(r.vertices->asOrderedSet()))
+            --top <- src.regions->iterate(r; acc: OrderedSet(Yakindu!Vertex) = OrderedSet{} | acc->union(r.vertices->asOrderedSet()))
+			top <- src.regions->collect(r|r.vertices)->flatten()
 		)
 }
 

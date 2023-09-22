@@ -1,4 +1,4 @@
-from os import path as osp
+from os import fsencode, fsdecode, listdir, path as osp
 from pathlib import Path
 import torch
 
@@ -17,6 +17,18 @@ metamodels = Metamodels(osp.join(RESOURCES_PATH, 'metamodels'))
 metamodels.register()
 
 resource_set = metamodels.get_resource_set()
+
+# directory = fsencode(osp.join(RESOURCES_PATH, 'models', 'yakindu_input'))
+    
+# for file in listdir(directory):
+#      filename = fsdecode(file)
+#      if filename.endswith(".xmi"): 
+#          print(osp.join(directory, filename))
+#          continue
+#      else:
+#          continue
+# exit()
+
 
 #For each of main models, get the graph representation
 xmi_path_left = osp.join(RESOURCES_PATH, 'models', 'yakindu.xmi')
@@ -131,7 +143,7 @@ class Encoder(nn.Module):
   """
   def __init__(self, node_dim=64):
     super(Encoder,self).__init__()   
-    self.gconv1  = gnn.SAGEConv((-1,-1),  node_dim)
+    self.gconv1  = gnn.SAGEConv((-1,-1), node_dim)
     self.gconv2  = gnn.SAGEConv((-1,-1), node_dim)
 
   def forward(self, x, edge_index):
@@ -158,7 +170,7 @@ class EdgeDecoder(torch.nn.Module):
 class MyGAE(nn.Module):
 
   def __init__(self, encoder,decoder, data:HeteroData, node_types:List[Tuple], node_dim:int):
-    
+
     super(MyGAE,self).__init__()
     self.node_types = {}
     for n in node_types:
