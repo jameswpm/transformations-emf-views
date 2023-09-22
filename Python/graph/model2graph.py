@@ -12,6 +12,7 @@ class Model2Graph():
         self.data = HeteroData()
         # Create list of dictionaries to store nodes, attributes and edges for different types
         self.nodes = {}
+        self.mapping_nodes = {}
         self.nodes_attrs = {}
         self.edge_index = {}
         self.label = label
@@ -117,6 +118,9 @@ class Model2Graph():
     
     def get_hetero_graph(self):
         return self.data
+    
+    def get_mapping_nodes(self):
+        return self.mapping_nodes
 
     def _add_node(self, node_type, node):
         if node_type not in self.nodes:
@@ -132,7 +136,11 @@ class Model2Graph():
         node_info = {"id": last_index, "node": node}
         self.nodes[node_type].append(node_info)
 
-        return last_index + 1
+        new_index = last_index + 1
+
+        self.mapping_nodes[node._internal_id] = new_index
+
+        return new_index
     
     def _add_node_attributtes(self, node_type, node_index, attr_list):
         if node_type not in self.nodes_attrs:

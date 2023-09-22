@@ -1,5 +1,6 @@
 from os import path as osp
 from pathlib import Path
+import torch
 
 #PyEcore
 from pyecore.resources import URI
@@ -50,8 +51,15 @@ m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'ya
 traces = Traces(m_resource_traces)
 mapping = traces.get_mapping_traces('State')
 
+#iterate over traces, adding the edge in the merged graph
+edges = []
+left_nodes_mapping = model_to_graph_left.get_mapping_nodes()
+right_nodes_mapping = model_to_graph_right.get_mapping_nodes()
+for src_uuid, target_uuid in mapping.items():
+    edges.append([left_nodes_mapping[src_uuid], right_nodes_mapping[target_uuid]])
+merged_graph['state', 'to', 'state'].edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
 
-print(mapping)
+print(merged_graph)
 
 
 
