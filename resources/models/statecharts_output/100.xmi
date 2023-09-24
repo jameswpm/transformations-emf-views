@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ASCII"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:statecharts="statecharts">
   <statecharts:Transition source="/67/@top.0" target="/67/@top.1"/>
   <statecharts:Transition source="/67/@top.1" target="/67/@top.2"/>

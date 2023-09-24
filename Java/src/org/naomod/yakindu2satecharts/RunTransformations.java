@@ -25,6 +25,8 @@ public class RunTransformations {
 	
 	public static String here = new File(".").getAbsolutePath();
 	
+	public static String baseDir = "../resources/models/";
+	
 	public static URI resourceURI(String relativePath) {
 		return URI.createFileURI(here + relativePath);
 	}
@@ -62,17 +64,27 @@ public class RunTransformations {
 		String basePath = "C:/Users/James/Projects/Eclipse/transformations-emf-views/Java";
 		for (File file : InDir.listFiles()) {
 			
-			if (file.getName().toString().equals(".gitkeep")) {
-				continue;
+			if (i >= 1) {
+				break;
 			}
 			
-			
+			if (file.getName().toString().equals(".gitkeep")) {
+				continue;
+			}			
 
 			System.out.println("File: " + file.getAbsolutePath());
 			
+			String relativeInputPath = "yakindu_input/" + file.getName();
+			String relativeTracePath = "statecharts_output/trace_" + file.getName();
+			String relativeOutputPath = "statecharts_output/" + file.getName();
+			
+			URI inputUri = resourceURI(relativeInputPath);
+			URI traceUri = resourceURI(relativeTracePath);
+			URI outputUri = resourceURI(relativeOutputPath);
+			
 			// Load models
 			Model inModel = EmftvmFactory.eINSTANCE.createModel();
-			inModel.setResource(rs.getResource(resourceURI("/../resources/models/yakindu_input/" + file.getName()), true));
+			inModel.setResource(rs.getResource(inputUri, true));
 			env.registerInputModel("IN", inModel);
 			
 			String relativePathTrace = "../resources/models/statecharts_output/trace_" + file.getName();
@@ -80,7 +92,7 @@ public class RunTransformations {
 			URI uriTrace = URI.createFileURI(fullPathTrace);
 			
 			Model traceOutModel = EmftvmFactory.eINSTANCE.createModel();
-			traceOutModel.setResource(rs.createResource(uriTrace));
+			traceOutModel.setResource(rs.createResource(traceUri));
 			env.registerOutputModel("trace", traceOutModel);
 			
 			String relativePathOut = "../resources/models/statecharts_output/" + file.getName();
@@ -88,7 +100,7 @@ public class RunTransformations {
 			URI uriOut = URI.createFileURI(fullPathOut);
 			
 			Model outModel = EmftvmFactory.eINSTANCE.createModel();
-			outModel.setResource(rs.createResource(uriOut));
+			outModel.setResource(rs.createResource(outputUri));
 			env.registerOutputModel("OUT", outModel);
 			
 			// Load and run module
@@ -104,6 +116,8 @@ public class RunTransformations {
 			inModel.getResource().save(Collections.emptyMap());
 			traceOutModel.getResource().save(Collections.emptyMap());
 			outModel.getResource().save(Collections.emptyMap());
+			
+			i++;
 
 		}
 	}

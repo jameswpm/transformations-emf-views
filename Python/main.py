@@ -1,4 +1,4 @@
-from os import fsencode, fsdecode, listdir, path as osp
+from os import sep as DIR_SEP, walk as oswalk, path as osp
 from pathlib import Path
 import torch
 
@@ -18,62 +18,67 @@ metamodels.register()
 
 resource_set = metamodels.get_resource_set()
 
-# directory = fsencode(osp.join(RESOURCES_PATH, 'models', 'yakindu_input'))
+def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
+  #For each of main models, get the graph representation
+  m_resource_src = resource_set.get_resource(URI(xmi_path_src))
+  m_resource_src.use_uuid = True
+  # #save resource with UUIDs at temporary directory
+  m_resource_src.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'src.xmi')))
+
+  m_resource_target = resource_set.get_resource(URI(xmi_path_target))
+  m_resource_target.use_uuid = True
+  m_resource_target.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'target.xmi')))
+
+  model_to_graph_src = Model2Graph(label="SRC")
+  model_to_graph_src.get_graph_from_model(m_resource_src)
+
+  model_to_graph_target = Model2Graph(label="TGT")
+  model_to_graph_target.get_graph_from_model(m_resource_target)
+
+  # merge the two graphs to be able to create trace links
+  merged_graph = model_to_graph_src.get_hetero_graph().update(model_to_graph_target.get_hetero_graph())
+
+  # get the traces model to define the target edge_index (edge used for the link prediction)
+  m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
+  # m_resource_traces.use_uuid = True
+  # m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
+
+  # Use the traces class to get a mapping of the traces by class
+  traces = Traces(m_resource_traces)
+  # TODO: State should not be hard-coded
+  mapping = traces.get_mapping_traces('State')
+
+  #iterate over traces, adding the edge in the merged graph
+  edges = []
+  left_nodes_mapping = model_to_graph_src.get_mapping_nodes()
+  right_nodes_mapping = model_to_graph_target.get_mapping_nodes()
+  for src_uuid, target_uuid in mapping.items():
+      edges.append([left_nodes_mapping[src_uuid], right_nodes_mapping[target_uuid]])
+
+  merged_graph['state', 'to', 'state'].edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
+
+  return merged_graph.edge_types
+
+directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
+directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
     
-# for file in listdir(directory):
-#      filename = fsdecode(file)
-#      if filename.endswith(".xmi"): 
-#          print(osp.join(directory, filename))
-#          continue
-#      else:
-#          continue
-# exit()
+for subdir, dirs, files in oswalk(directory_input_src):
+    for file in files:
+        filepath = subdir + DIR_SEP + file
+
+        if filepath.endswith(".xmi"):
+            xmi_path_src = filepath
+            xmi_path_target = directory_input_target + DIR_SEP + file
+            xmi_path_traces = directory_input_target + DIR_SEP + "trace_" + file
+            # just include in the graph when have all files (src, target and traces)
+            if osp.isfile(xmi_path_target) and osp.isfile(xmi_path_traces):
+              print (xmi_path_src)
+              print (xmi_path_target)
+              print (xmi_path_traces)
+              print (get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces))
 
 
-#For each of main models, get the graph representation
-xmi_path_left = osp.join(RESOURCES_PATH, 'models', 'yakindu.xmi')
-m_resource_left = resource_set.get_resource(URI(xmi_path_left))
-m_resource_left.use_uuid = True
-# #save resource with UUIDs at temporary directory
-m_resource_left.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'yakindu.xmi')))
-
-xmi_path_right = osp.join(RESOURCES_PATH, 'models', 'statecharts-emftvm.xmi')
-m_resource_right = resource_set.get_resource(URI(xmi_path_right))
-m_resource_right.use_uuid = True
-m_resource_right.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'statecharts-emftvm.xmi')))
-
-#TODO: How to define the labels?
-model_to_graph_left = Model2Graph(label="Y")
-model_to_graph_left.get_graph_from_model(m_resource_left)
-
-model_to_graph_right = Model2Graph(label="S")
-model_to_graph_right.get_graph_from_model(m_resource_right)
-
-# merge the two graphs to be able to create trace links
-merged_graph = model_to_graph_left.get_hetero_graph().update(model_to_graph_right.get_hetero_graph())
-
-# get the graph of the trace model
-model_to_graph_traces = Model2Graph()
-xmi_path_traces = osp.join(RESOURCES_PATH, 'models', 'yakindu_stratecharts_traces.xmi')
-m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
-m_resource_traces.use_uuid = True
-m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'yakindu_stratecharts_traces.xmi')))
-
-# Use the traces class to get a mapping of the traces by class
-traces = Traces(m_resource_traces)
-mapping = traces.get_mapping_traces('State')
-
-#iterate over traces, adding the edge in the merged graph
-edges = []
-left_nodes_mapping = model_to_graph_left.get_mapping_nodes()
-right_nodes_mapping = model_to_graph_right.get_mapping_nodes()
-for src_uuid, target_uuid in mapping.items():
-    edges.append([left_nodes_mapping[src_uuid], right_nodes_mapping[target_uuid]])
-
-merged_graph['state', 'to', 'state'].edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
-
-print(merged_graph.edge_types)
-
+exit()
 # Starts to create the necessary GNN code to deal with the graph
 from torch_geometric.utils import (
     add_self_loops,
@@ -81,7 +86,7 @@ from torch_geometric.utils import (
     remove_self_loops ,
 )
 import torch.nn.functional as F
-from sklearn.metrics import accuracy_score,roc_auc_score,average_precision_score
+from sklearn.metrics import accuracy_score,roc_auc_score, average_precision_score
 from sklearn.metrics import precision_score
 import warnings
 warnings.filterwarnings("ignore")
