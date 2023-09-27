@@ -3,7 +3,7 @@
   <rules rule="TransitionToTransition">
     <links>
       <sourceElements name="src" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/18.xmi#//@regions.0/@vertices.0/@outgoingTransitions.0"/>
+        <object href="/yakindu_input/18.xmi#//@regions.0/@vertices.0/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/18.xmi#/0"/>

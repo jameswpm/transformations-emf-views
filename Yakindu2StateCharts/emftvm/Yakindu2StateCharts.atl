@@ -22,9 +22,9 @@ rule TransitionToTransition {
 --  Vertex to StateVertex, excluding the StateChart
 rule VertexToStateVertex {
     from
-        src: Yakindu!Vertex (not src.isStateChart())
+        src: Yakindu!Vertex (not src.isStateChart()) 
     to
-        target: Statecharts!State 
+        target: Statecharts!State
 		
 }
 

@@ -74,13 +74,11 @@ public class RunTransformations {
 
 			System.out.println("File: " + file.getAbsolutePath());
 			
-			String relativeInputPath = "yakindu_input/" + file.getName();
-			String relativeTracePath = "statecharts_output/trace_" + file.getName();
-			String relativeOutputPath = "statecharts_output/" + file.getName();
+			String relativeInputPath = "/../resources/yakindu_input/" + file.getName();
+			String relativeTracePath = "/../resources/statecharts_output/trace_" + file.getName();
+			String relativeOutputPath = "/../resources/statecharts_output/" + file.getName();
 			
 			URI inputUri = resourceURI(relativeInputPath);
-			URI traceUri = resourceURI(relativeTracePath);
-			URI outputUri = resourceURI(relativeOutputPath);
 			
 			// Load models
 			Model inModel = EmftvmFactory.eINSTANCE.createModel();
@@ -92,15 +90,16 @@ public class RunTransformations {
 			URI uriTrace = URI.createFileURI(fullPathTrace);
 			
 			Model traceOutModel = EmftvmFactory.eINSTANCE.createModel();
-			traceOutModel.setResource(rs.createResource(traceUri));
+			traceOutModel.setResource(rs.createResource(uriTrace));
 			env.registerOutputModel("trace", traceOutModel);
 			
 			String relativePathOut = "../resources/models/statecharts_output/" + file.getName();
 			String fullPathOut = basePath + "/" + relativePathOut;
-			URI uriOut = URI.createFileURI(fullPathOut);
+			URI uriOut = URI.createURI(fullPathOut);
+
 			
 			Model outModel = EmftvmFactory.eINSTANCE.createModel();
-			outModel.setResource(rs.createResource(outputUri));
+			outModel.setResource(rs.createResource(uriOut));
 			env.registerOutputModel("OUT", outModel);
 			
 			// Load and run module
@@ -114,6 +113,7 @@ public class RunTransformations {
 			
 			// Save models
 			inModel.getResource().save(Collections.emptyMap());
+			//TODO: Check the options for serialization
 			traceOutModel.getResource().save(Collections.emptyMap());
 			outModel.getResource().save(Collections.emptyMap());
 			
