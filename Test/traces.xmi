@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<trace:TraceLinkSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http://www.eclipse.org/m2m/atl/emftvm/2011/Trace" defaultSourceElements="//@rules.0/@links.0/@sourceElements.0 //@rules.0/@links.1/@sourceElements.0 //@rules.0/@links.2/@sourceElements.0 //@rules.0/@links.3/@sourceElements.0 //@rules.0/@links.4/@sourceElements.0 //@rules.1/@links.0/@sourceElements.0 //@rules.1/@links.1/@sourceElements.0 //@rules.1/@links.2/@sourceElements.0 //@rules.1/@links.3/@sourceElements.0">
+  <rules rule="Member2Male">
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/0/@father"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/0"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/0/@sons.0"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/1"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/1/@father"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/2"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/1/@sons.0"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/3"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/1/@sons.1"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/4"/>
+      </targetElements>
+    </links>
+  </rules>
+  <rules rule="Member2Female">
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/0/@mother"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/5"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/0/@daughters.0"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/6"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/1/@mother"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/7"/>
+      </targetElements>
+    </links>
+    <links>
+      <sourceElements name="s" defaultFor="/">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/sample-Families.xmi#/1/@daughters.0"/>
+      </sourceElements>
+      <targetElements name="t">
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../Test/persons.xmi#/8"/>
+      </targetElements>
+    </links>
+  </rules>
+</trace:TraceLinkSet>

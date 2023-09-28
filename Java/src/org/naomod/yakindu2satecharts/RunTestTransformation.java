@@ -53,7 +53,7 @@ public class RunTestTransformation {
 		env.registerMetaModel("Families", familiesMetaModel);
 
 		Metamodel personsMetaModel = EmftvmFactory.eINSTANCE.createMetamodel();
-		personsMetaModel.setResource(rs.getResource(resourceURI("/../Test/Families.ecore"), true));
+		personsMetaModel.setResource(rs.getResource(resourceURI("/../Test/Persons.ecore"), true));
 		env.registerMetaModel("Persons", personsMetaModel);
 
 		String relativeInputPath = "/../Test/sample-Families.xmi";
@@ -66,14 +66,12 @@ public class RunTestTransformation {
 		inModel.setResource(rs.getResource(inputUri, true));
 		env.registerInputModel("IN", inModel);
 
-		String fullPathTrace = relativeTracePath;
-		URI uriTrace = URI.createFileURI(fullPathTrace);
+		URI uriTrace = resourceURI(relativeTracePath);
 		Model traceOutModel = EmftvmFactory.eINSTANCE.createModel();
 		traceOutModel.setResource(rs.createResource(uriTrace));
 		env.registerOutputModel("trace", traceOutModel);
 
-		String fullPathOut = relativeOutputPath;
-		URI uriOut = URI.createFileURI(fullPathOut);
+		URI uriOut = resourceURI(relativeOutputPath);
 		Model outModel = EmftvmFactory.eINSTANCE.createModel();
 		outModel.setResource(rs.createResource(uriOut));
 		env.registerOutputModel("OUT", outModel);
