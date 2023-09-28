@@ -2,14 +2,20 @@ package org.naomod.yakindu2satecharts;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.URIConverter;
+import org.eclipse.emf.ecore.resource.URIHandler;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.resource.impl.URIHandlerImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.m2m.atl.emftvm.EmftvmFactory;
@@ -47,6 +53,8 @@ public class RunTransformations {
 		EPackage StateChartsPkg = (EPackage) rs.getResource(resourceURI("/../resources/metamodels/statecharts.ecore"), true)
 				.getContents().get(0);
 		EPackage.Registry.INSTANCE.put(StateChartsPkg.getNsURI(), StateChartsPkg);
+		
+		rs.getURIConverter().getURIHandlers().add(new CustomURIHandler());
 
 		// Load metamodels
 		Metamodel yakinduMetaModel = EmftvmFactory.eINSTANCE.createMetamodel();
@@ -62,6 +70,12 @@ public class RunTransformations {
 
 		int i = 0;
 		String basePath = "C:/Users/James/Projects/Eclipse/transformations-emf-views/Java";
+		
+		URI baseURI = URI.createFileURI("C:/Users/James/Projects/Eclipse/transformations-emf-views/");
+		
+		Map<URI, URI> uriMap = URIConverter.URI_MAP;
+		uriMap.put(URI.createURI("file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/"), baseURI.appendSegment("resources").appendSegment("models").appendSegment(""));
+
 		for (File file : InDir.listFiles()) {
 			
 			if (i >= 1) {
@@ -74,30 +88,27 @@ public class RunTransformations {
 
 			System.out.println("File: " + file.getAbsolutePath());
 			
-			String relativeInputPath = "/../resources/yakindu_input/" + file.getName();
-			String relativeTracePath = "/../resources/statecharts_output/trace_" + file.getName();
-			String relativeOutputPath = "/../resources/statecharts_output/" + file.getName();
+			String relativeInputPath = "../resources/models/yakindu_input/" + file.getName();
+			String relativeTracePath = "../resources/models/statecharts_output/" + file.getName();
+			String relativeOutputPath = "../resources/models/statecharts_output/" + file.getName();
 			
-			URI inputUri = resourceURI(relativeInputPath);
+			URI inputUri = URI.createFileURI(relativeInputPath);
 			
 			// Load models
 			Model inModel = EmftvmFactory.eINSTANCE.createModel();
 			inModel.setResource(rs.getResource(inputUri, true));
 			env.registerInputModel("IN", inModel);
 			
-			String relativePathTrace = "../resources/models/statecharts_output/trace_" + file.getName();
-			String fullPathTrace = basePath + "/" + relativePathTrace;
-			URI uriTrace = URI.createFileURI(fullPathTrace);
-			
+//			String relativePathTrace = "../resources/models/statecharts_output/trace_" + file.getName();
+			String fullPathTrace = relativeTracePath;
+			URI uriTrace = URI.createFileURI(fullPathTrace);			
 			Model traceOutModel = EmftvmFactory.eINSTANCE.createModel();
 			traceOutModel.setResource(rs.createResource(uriTrace));
 			env.registerOutputModel("trace", traceOutModel);
 			
-			String relativePathOut = "../resources/models/statecharts_output/" + file.getName();
-			String fullPathOut = basePath + "/" + relativePathOut;
-			URI uriOut = URI.createURI(fullPathOut);
-
-			
+//			String relativePathOut = "../resources/models/statecharts_output/" + file.getName();
+			String fullPathOut = relativeOutputPath;
+			URI uriOut = URI.createFileURI(fullPathOut);			
 			Model outModel = EmftvmFactory.eINSTANCE.createModel();
 			outModel.setResource(rs.createResource(uriOut));
 			env.registerOutputModel("OUT", outModel);
@@ -111,6 +122,10 @@ public class RunTransformations {
 			env.run(td);
 			td.finish();
 			
+			//options for save
+//			Map<String, Object> options = new HashMap<String, Object>();
+//			options.put(XMLResource., );
+			
 			// Save models
 			inModel.getResource().save(Collections.emptyMap());
 			//TODO: Check the options for serialization
@@ -121,4 +136,15 @@ public class RunTransformations {
 
 		}
 	}
+}
+
+class CustomURIHandler extends URIHandlerImpl implements URIHandler {
+    @Override
+    public URI deresolve(URI uri) {
+        // Implement your custom URI deresolution logic here
+        // You can generate relative URIs for cross-document references based on your requirements.
+        // For simplicity, this example returns the input URI as is.
+    	URI baseURI = URI.createFileURI("C:/Users/James/Projects/Eclipse/transformations-emf-views/");
+        return uri;
+    }
 }

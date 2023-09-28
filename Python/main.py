@@ -4,6 +4,7 @@ import torch
 
 #PyEcore
 from pyecore.resources import URI
+from pyecore.resources.resource import 
 from graph.model2graph import Model2Graph
 
 #Internal
