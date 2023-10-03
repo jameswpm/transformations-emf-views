@@ -2,13 +2,17 @@ package org.naomod.yakindu2satecharts;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.Map;
+import java.util.stream.Collectors;
 
+import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.URIConverter;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
@@ -61,6 +65,8 @@ public class RunTestTransformation {
 		String relativeTracePath = "/../Test/traces.xmi";
 		String relativeOutputPath = "/../Test/persons.xmi";
 		
+		URIConverter fileConverter = createURIConverter();
+		rs.setURIConverter(fileConverter);
 
 		// Load models
 		URI inputUri = resourceURI(relativeInputPath);
@@ -79,7 +85,7 @@ public class RunTestTransformation {
 		env.registerOutputModel("OUT", outModel);
 
 		// Load and run module
-		ModuleResolver mr = new DefaultModuleResolver("./../Test/emftvm/", rs);
+		ModuleResolver mr = new DefaultModuleResolver("./../Test/emftvm/", new ResourceSetImpl());
 		TimingData td = new TimingData();
 		env.loadModule(mr, "Families2Persons");
 		td.finishLoading();
@@ -90,5 +96,47 @@ public class RunTestTransformation {
 		inModel.getResource().save(Collections.emptyMap());
 		traceOutModel.getResource().save(Collections.emptyMap());
 		outModel.getResource().save(Collections.emptyMap());
+	}
+	
+	protected static URIConverter createURIConverter() {
+	    // Converts file:/... URIs to relative URIs
+	    // Easier to deal with them in PyEcore
+	    return new ExtensibleURIConverterImpl() {
+
+	        @Override
+	        public URI normalize(URI uri) {
+	            if (uri.isFile()) {
+	                URI normalized = getURIMap().get(uri);
+	                if (normalized == null) {
+	                    //String path = uri.segmentsList().stream().skip(2).collect(Collectors.joining("/"));
+	                    
+	                    File file = new File(uri.toFileString());
+
+	                    // Check if the file exists
+	                    if (file.exists()) {
+	                    	// Get the canonical path of the file
+	                        String canonicalPath;
+	                        try {
+	                            canonicalPath = file.getCanonicalPath();
+	                        } catch (IOException e) {
+	                            canonicalPath = file.getAbsolutePath();
+	                        }
+
+	                        // Calculate the relative path from the current working directory
+	                        String currentWorkingDir = System.getProperty("user.dir");
+	                        String relativePath = new File(currentWorkingDir).toURI().relativize(new File(canonicalPath).toURI()).getPath();
+
+	                        normalized = URI.createURI(relativePath);
+	                        getURIMap().put(uri, normalized);
+	                    }
+	        
+	                }
+	                if (normalized != null) {
+	                    return normalized;
+	                }
+	            }
+	            return super.normalize(uri);
+	        }
+	    };
 	}
 }

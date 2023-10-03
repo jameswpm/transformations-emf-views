@@ -4,20 +4,14 @@ import torch
 
 #PyEcore
 from pyecore.resources import URI
-from pyecore.resources.resource import 
-from graph.model2graph import Model2Graph
+from pyecore.resources.resource import HttpURIConverter
 
 #Internal
+from graph.model2graph import Model2Graph
 from modeling.metamodels import Metamodels
 from modeling.traces import Traces
 
 RESOURCES_PATH = osp.join(Path(__file__).parent, '..', 'resources')
-
- # Register the metamodels in the resource set
-metamodels = Metamodels(osp.join(RESOURCES_PATH, 'metamodels'))
-metamodels.register()
-
-resource_set = metamodels.get_resource_set()
 
 def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
   #For each of main models, get the graph representation
@@ -60,8 +54,16 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
 
   return merged_graph.edge_types
 
+# Register the metamodels in the resource set
+metamodels = Metamodels(osp.join(RESOURCES_PATH, 'metamodels'))
+metamodels.register()
+
+resource_set = metamodels.get_resource_set()
+
 directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
 directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
+
+resource_set.uri_mapper['file:' + RESOURCES_PATH] = RESOURCES_PATH
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:

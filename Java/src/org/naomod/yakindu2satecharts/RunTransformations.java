@@ -53,8 +53,6 @@ public class RunTransformations {
 				.getResource(resourceURI("/../resources/metamodels/statecharts.ecore"), true).getContents().get(0);
 		EPackage.Registry.INSTANCE.put(StateChartsPkg.getNsURI(), StateChartsPkg);
 
-		// rs.getURIConverter().getURIHandlers().add(new CustomURIHandler());
-
 		// Load metamodels into execenv
 		Metamodel yakinduMetaModel = EmftvmFactory.eINSTANCE.createMetamodel();
 		yakinduMetaModel.setResource(rs.getResource(resourceURI("/../resources/metamodels/yakindu.ecore"), true));
@@ -68,15 +66,12 @@ public class RunTransformations {
 		File InDir = new File("../resources/models/yakindu_input");
 
 		int i = 0;
-//		String basePath = "C:/Users/James/Projects/Eclipse/transformations-emf-views/Java";
-//		
-//		URI baseURI = URI.createFileURI("C:/Users/James/Projects/Eclipse/transformations-emf-views/");
-//		
-//		Map<URI, URI> uriMap = URIConverter.URI_MAP;
-//		uriMap.put(URI.createURI("file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/"), baseURI.appendSegment("resources").appendSegment("models").appendSegment(""));
 
 		for (File file : InDir.listFiles()) {
 
+			if (i > 1) {
+				break;
+			}
 
 			if (file.getName().toString().equals(".gitkeep")) {
 				continue;

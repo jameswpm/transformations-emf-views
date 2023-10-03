@@ -14,7 +14,7 @@ class Traces():
             for element in root.eAllContents():
                 class_name = element.eClass.name
                 if class_name == 'TraceLink':
-                    #TODO: It works only for 1to1 relation. Fix it to be more generic                    
+                    #TODO: It works only for 1to1 relation.                   
                     source_element = element.sourceElements[0]
                     object_element = source_element.object
                     object_element_class = object_element.eClass.name
