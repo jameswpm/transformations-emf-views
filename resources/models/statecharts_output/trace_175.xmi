@@ -6,7 +6,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.0/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/0"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/0"/>
       </targetElements>
     </links>
     <links>
@@ -14,7 +14,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.1/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/1"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/1"/>
       </targetElements>
     </links>
     <links>
@@ -22,7 +22,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.1/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/2"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/2"/>
       </targetElements>
     </links>
     <links>
@@ -30,7 +30,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.1/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/3"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/3"/>
       </targetElements>
     </links>
     <links>
@@ -38,7 +38,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.1/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/4"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/4"/>
       </targetElements>
     </links>
     <links>
@@ -46,7 +46,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.2/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/5"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/5"/>
       </targetElements>
     </links>
     <links>
@@ -54,7 +54,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.2/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/6"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/6"/>
       </targetElements>
     </links>
     <links>
@@ -62,7 +62,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.2/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/7"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/7"/>
       </targetElements>
     </links>
     <links>
@@ -70,7 +70,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.2/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/8"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/8"/>
       </targetElements>
     </links>
     <links>
@@ -78,7 +78,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.3/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/9"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/9"/>
       </targetElements>
     </links>
     <links>
@@ -86,7 +86,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.3/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/10"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/10"/>
       </targetElements>
     </links>
     <links>
@@ -94,7 +94,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.3/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/11"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/11"/>
       </targetElements>
     </links>
     <links>
@@ -102,7 +102,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.3/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/12"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/12"/>
       </targetElements>
     </links>
     <links>
@@ -110,7 +110,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.4/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/13"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/13"/>
       </targetElements>
     </links>
     <links>
@@ -118,7 +118,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.4/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/14"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/14"/>
       </targetElements>
     </links>
     <links>
@@ -126,7 +126,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.4/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/15"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/15"/>
       </targetElements>
     </links>
     <links>
@@ -134,7 +134,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.4/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/16"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/16"/>
       </targetElements>
     </links>
     <links>
@@ -142,7 +142,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.5/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/17"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/17"/>
       </targetElements>
     </links>
     <links>
@@ -150,7 +150,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.5/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/18"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/18"/>
       </targetElements>
     </links>
     <links>
@@ -158,7 +158,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.6/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/19"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/19"/>
       </targetElements>
     </links>
     <links>
@@ -166,7 +166,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.6/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/20"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/20"/>
       </targetElements>
     </links>
     <links>
@@ -174,7 +174,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.7/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/21"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/21"/>
       </targetElements>
     </links>
     <links>
@@ -182,7 +182,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.7/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/22"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/22"/>
       </targetElements>
     </links>
     <links>
@@ -190,7 +190,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.8/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/23"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/23"/>
       </targetElements>
     </links>
     <links>
@@ -198,7 +198,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.8/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/24"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/24"/>
       </targetElements>
     </links>
     <links>
@@ -206,7 +206,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.9/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/25"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/25"/>
       </targetElements>
     </links>
     <links>
@@ -214,7 +214,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.9/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/26"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/26"/>
       </targetElements>
     </links>
     <links>
@@ -222,7 +222,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.10/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/27"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/27"/>
       </targetElements>
     </links>
     <links>
@@ -230,7 +230,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.10/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/28"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/28"/>
       </targetElements>
     </links>
     <links>
@@ -238,7 +238,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.11/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/29"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/29"/>
       </targetElements>
     </links>
     <links>
@@ -246,7 +246,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.11/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/30"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/30"/>
       </targetElements>
     </links>
     <links>
@@ -254,7 +254,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.12/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/31"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/31"/>
       </targetElements>
     </links>
     <links>
@@ -262,7 +262,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.12/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/32"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/32"/>
       </targetElements>
     </links>
     <links>
@@ -270,7 +270,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.13/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/33"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/33"/>
       </targetElements>
     </links>
     <links>
@@ -278,7 +278,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.13/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/34"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/34"/>
       </targetElements>
     </links>
     <links>
@@ -286,7 +286,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.13/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/35"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/35"/>
       </targetElements>
     </links>
     <links>
@@ -294,7 +294,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.13/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/36"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/36"/>
       </targetElements>
     </links>
     <links>
@@ -302,7 +302,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.14/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/37"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/37"/>
       </targetElements>
     </links>
     <links>
@@ -310,7 +310,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.14/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/38"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/38"/>
       </targetElements>
     </links>
     <links>
@@ -318,7 +318,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.14/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/39"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/39"/>
       </targetElements>
     </links>
     <links>
@@ -326,7 +326,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.14/@outgoingTransitions.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/40"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/40"/>
       </targetElements>
     </links>
     <links>
@@ -334,7 +334,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.15/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/41"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/41"/>
       </targetElements>
     </links>
     <links>
@@ -342,7 +342,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.16/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/42"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/42"/>
       </targetElements>
     </links>
     <links>
@@ -350,7 +350,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.17/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/43"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/43"/>
       </targetElements>
     </links>
     <links>
@@ -358,7 +358,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.17/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/44"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/44"/>
       </targetElements>
     </links>
     <links>
@@ -366,7 +366,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.18/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/45"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/45"/>
       </targetElements>
     </links>
     <links>
@@ -374,7 +374,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.18/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/46"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/46"/>
       </targetElements>
     </links>
     <links>
@@ -382,7 +382,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.19/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/47"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/47"/>
       </targetElements>
     </links>
     <links>
@@ -390,7 +390,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.19/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/48"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/48"/>
       </targetElements>
     </links>
     <links>
@@ -398,7 +398,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.19/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/49"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/49"/>
       </targetElements>
     </links>
     <links>
@@ -406,7 +406,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.20/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/50"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/50"/>
       </targetElements>
     </links>
     <links>
@@ -414,7 +414,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.20/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/51"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/51"/>
       </targetElements>
     </links>
     <links>
@@ -422,7 +422,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.20/@outgoingTransitions.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/52"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/52"/>
       </targetElements>
     </links>
     <links>
@@ -430,7 +430,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.21/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/53"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/53"/>
       </targetElements>
     </links>
     <links>
@@ -438,7 +438,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.21/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/54"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/54"/>
       </targetElements>
     </links>
     <links>
@@ -446,7 +446,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.22/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/55"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/55"/>
       </targetElements>
     </links>
     <links>
@@ -454,7 +454,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.22/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/56"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/56"/>
       </targetElements>
     </links>
     <links>
@@ -462,7 +462,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.23/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/57"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/57"/>
       </targetElements>
     </links>
     <links>
@@ -470,7 +470,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.23/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/58"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/58"/>
       </targetElements>
     </links>
     <links>
@@ -478,7 +478,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.24/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/59"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/59"/>
       </targetElements>
     </links>
     <links>
@@ -486,7 +486,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.24/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/60"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/60"/>
       </targetElements>
     </links>
     <links>
@@ -494,7 +494,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.25/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/61"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/61"/>
       </targetElements>
     </links>
     <links>
@@ -502,7 +502,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.25/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/62"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/62"/>
       </targetElements>
     </links>
     <links>
@@ -510,7 +510,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.26/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/63"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/63"/>
       </targetElements>
     </links>
     <links>
@@ -518,7 +518,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.26/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/64"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/64"/>
       </targetElements>
     </links>
     <links>
@@ -526,7 +526,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.27/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/65"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/65"/>
       </targetElements>
     </links>
     <links>
@@ -534,7 +534,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.27/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/66"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/66"/>
       </targetElements>
     </links>
     <links>
@@ -542,7 +542,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.28/@outgoingTransitions.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/67"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/67"/>
       </targetElements>
     </links>
     <links>
@@ -550,7 +550,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.28/@outgoingTransitions.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/68"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/68"/>
       </targetElements>
     </links>
   </rules>
@@ -560,7 +560,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.0"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.0"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.0"/>
       </targetElements>
     </links>
     <links>
@@ -568,7 +568,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.1"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.1"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.1"/>
       </targetElements>
     </links>
     <links>
@@ -576,7 +576,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.2"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.2"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.2"/>
       </targetElements>
     </links>
     <links>
@@ -584,7 +584,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.3"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.3"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.3"/>
       </targetElements>
     </links>
     <links>
@@ -592,7 +592,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.4"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.4"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.4"/>
       </targetElements>
     </links>
     <links>
@@ -600,7 +600,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.5"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.5"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.5"/>
       </targetElements>
     </links>
     <links>
@@ -608,7 +608,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.6"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.6"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.6"/>
       </targetElements>
     </links>
     <links>
@@ -616,7 +616,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.7"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.7"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.7"/>
       </targetElements>
     </links>
     <links>
@@ -624,7 +624,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.8"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.8"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.8"/>
       </targetElements>
     </links>
     <links>
@@ -632,7 +632,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.9"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.9"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.9"/>
       </targetElements>
     </links>
     <links>
@@ -640,7 +640,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.10"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.10"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.10"/>
       </targetElements>
     </links>
     <links>
@@ -648,7 +648,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.11"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.11"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.11"/>
       </targetElements>
     </links>
     <links>
@@ -656,7 +656,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.12"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.12"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.12"/>
       </targetElements>
     </links>
     <links>
@@ -664,7 +664,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.13"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.13"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.13"/>
       </targetElements>
     </links>
     <links>
@@ -672,7 +672,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.14"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.14"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.14"/>
       </targetElements>
     </links>
     <links>
@@ -680,7 +680,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.15"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.15"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.15"/>
       </targetElements>
     </links>
     <links>
@@ -688,7 +688,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.16"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.16"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.16"/>
       </targetElements>
     </links>
     <links>
@@ -696,7 +696,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.17"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.17"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.17"/>
       </targetElements>
     </links>
     <links>
@@ -704,7 +704,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.18"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.18"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.18"/>
       </targetElements>
     </links>
     <links>
@@ -712,7 +712,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.19"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.19"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.19"/>
       </targetElements>
     </links>
     <links>
@@ -720,7 +720,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.20"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.20"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.20"/>
       </targetElements>
     </links>
     <links>
@@ -728,7 +728,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.21"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.21"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.21"/>
       </targetElements>
     </links>
     <links>
@@ -736,7 +736,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.22"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.22"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.22"/>
       </targetElements>
     </links>
     <links>
@@ -744,7 +744,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.23"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.23"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.23"/>
       </targetElements>
     </links>
     <links>
@@ -752,7 +752,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.24"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.24"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.24"/>
       </targetElements>
     </links>
     <links>
@@ -760,7 +760,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.25"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.25"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.25"/>
       </targetElements>
     </links>
     <links>
@@ -768,7 +768,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.26"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.26"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.26"/>
       </targetElements>
     </links>
     <links>
@@ -776,7 +776,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.27"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.27"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.27"/>
       </targetElements>
     </links>
     <links>
@@ -784,7 +784,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#//@regions.0/@vertices.28"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69/@top.28"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69/@top.28"/>
       </targetElements>
     </links>
   </rules>
@@ -794,7 +794,7 @@
         <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/yakindu_input/175.xmi#/"/>
       </sourceElements>
       <targetElements name="target">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../resources/models/statecharts_output/175.xmi#/69"/>
+        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/./../resources/models/statecharts_output/175.xmi#/69"/>
       </targetElements>
     </links>
   </rules>
