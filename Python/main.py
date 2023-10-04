@@ -35,8 +35,8 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
 
   # get the traces model to define the target edge_index (edge used for the link prediction)
   m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
-  # m_resource_traces.use_uuid = True
-  # m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
+  m_resource_traces.use_uuid = True
+  m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
 
   # Use the traces class to get a mapping of the traces by class
   traces = Traces(m_resource_traces)

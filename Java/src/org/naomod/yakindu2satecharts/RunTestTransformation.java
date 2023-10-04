@@ -3,6 +3,8 @@ package org.naomod.yakindu2satecharts;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -61,25 +63,28 @@ public class RunTestTransformation {
 		personsMetaModel.setResource(rs.getResource(resourceURI("/../Test/Persons.ecore"), true));
 		env.registerMetaModel("Persons", personsMetaModel);
 
-		String relativeInputPath = "/../Test/sample-Families.xmi";
-		String relativeTracePath = "/../Test/traces.xmi";
-		String relativeOutputPath = "/../Test/persons.xmi";
+		String relativeInputPath = "../Test/sample-Families.xmi";
+		Path absoluteInputPath = Paths.get(relativeInputPath).normalize().toAbsolutePath();
+		String relativeTracePath = "../Test/traces.xmi";
+		Path absoluteTracePath = Paths.get(relativeTracePath).normalize().toAbsolutePath();
+		String relativeOutputPath = "../Test/persons.xmi";
+		Path absoluteOutputPath = Paths.get(relativeOutputPath).normalize().toAbsolutePath();
 		
 		URIConverter fileConverter = createURIConverter();
 		rs.setURIConverter(fileConverter);
 
 		// Load models
-		URI inputUri = resourceURI(relativeInputPath);
+		URI inputUri = URI.createFileURI(absoluteInputPath.toString());
 		Model inModel = EmftvmFactory.eINSTANCE.createModel();
 		inModel.setResource(rs.getResource(inputUri, true));
 		env.registerInputModel("IN", inModel);
 
-		URI uriTrace = resourceURI(relativeTracePath);
+		URI uriTrace = URI.createFileURI(absoluteTracePath.toString());
 		Model traceOutModel = EmftvmFactory.eINSTANCE.createModel();
 		traceOutModel.setResource(rs.createResource(uriTrace));
 		env.registerOutputModel("trace", traceOutModel);
 
-		URI uriOut = resourceURI(relativeOutputPath);
+		URI uriOut = URI.createFileURI(absoluteOutputPath.toString());
 		Model outModel = EmftvmFactory.eINSTANCE.createModel();
 		outModel.setResource(rs.createResource(uriOut));
 		env.registerOutputModel("OUT", outModel);
@@ -122,11 +127,7 @@ public class RunTestTransformation {
 	                            canonicalPath = file.getAbsolutePath();
 	                        }
 
-	                        // Calculate the relative path from the current working directory
-	                        String currentWorkingDir = System.getProperty("user.dir");
-	                        String relativePath = new File(currentWorkingDir).toURI().relativize(new File(canonicalPath).toURI()).getPath();
-
-	                        normalized = URI.createURI(relativePath);
+	                        normalized = URI.createURI(canonicalPath);
 	                        getURIMap().put(uri, normalized);
 	                    }
 	        
