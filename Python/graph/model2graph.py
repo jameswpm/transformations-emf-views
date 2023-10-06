@@ -7,7 +7,7 @@ from torch_geometric.data import HeteroData
 
 class Model2Graph():
 
-    def __init__(self, label = None):        
+    def __init__(self):        
         # Initialize a HeteroData object
         self.data = HeteroData()
         # Create list of dictionaries to store nodes, attributes and edges for different types
@@ -15,20 +15,19 @@ class Model2Graph():
         self.mapping_nodes = {}
         self.nodes_attrs = {}
         self.edge_index = {}
-        self.label = label
 
-    def get_graph_from_model(self, model_resource, metafilter=None,
+    def get_graph_from_model(self, model_resource, label = None, metafilter=None,
                             consider_attributtes=False):
         # traverse the model
         list_elements = []
         for root in model_resource.contents:
             list_elements.append(root)
             list_elements = list_elements + list(root.eAllContents())
-        return self._get_graph_from_model_elements(list_elements, metafilter=metafilter,
+        self._get_graph_from_model_elements(list_elements, label, metafilter=metafilter,
                                             consider_attributtes=consider_attributtes)
 
 
-    def _get_graph_from_model_elements(self, list_elements, metafilter=None,
+    def _get_graph_from_model_elements(self, list_elements, label = None, metafilter=None,
                                     consider_attributtes=False):   
 
         for obj in list_elements:
@@ -36,8 +35,8 @@ class Model2Graph():
                 continue
             # Add node
             node_type = obj.eClass.name
-            if self.label is not None:
-                node_type = f'{self.label}-{node_type}'
+            if label is not None:
+                node_type = f'{label}-{node_type}'
             node_index = self._add_node(node_type, obj)       
 
             attributes = {}
@@ -59,8 +58,8 @@ class Model2Graph():
                                     (not metafilter.pass_filter_object(ref_obj))):
                                 continue
                             ref_obj_type = ref_obj.eClass.name
-                            if self.label is not None:
-                                ref_obj_type = f'{self.label}-{ref_obj_type}'
+                            if label is not None:
+                                ref_obj_type = f'{label}-{ref_obj_type}'
                             ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                             # Add edge
@@ -77,8 +76,8 @@ class Model2Graph():
                                 (not metafilter.pass_filter_object(ref_obj))):
                             continue
                         ref_obj_type = ref_obj.eClass.name
-                        if self.label is not None:
-                                ref_obj_type = f'{self.label}-{ref_obj_type}'
+                        if label is not None:
+                                ref_obj_type = f'{label}-{ref_obj_type}'
                         ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                         # Add edge
@@ -102,6 +101,9 @@ class Model2Graph():
             if consider_attributtes:
                 self._add_node_attributtes(node_type, node_index, attributes)
         
+    
+    def get_hetero_graph(self):
+        
         # Convert nodes to PyTorch tensors and set HeteroData
         for node_type, node_list in self.nodes.items():
             self.data[node_type].num_nodes = len(node_list)
@@ -115,9 +117,7 @@ class Model2Graph():
         #TODO: Attributes not needed for the first experiments with transformations
         # if consider_attributtes:
         #     # convert attributtes to PyTorch tensors
-        
-    
-    def get_hetero_graph(self):
+
         return self.data
     
     def get_mapping_nodes(self):

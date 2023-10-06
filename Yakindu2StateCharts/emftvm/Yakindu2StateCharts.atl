@@ -34,7 +34,6 @@ rule StatechartToStateMachine {
         src: Yakindu!Statechart
     to
         target: Statecharts!StateMachine(
-            --top <- src.regions->iterate(r; acc: OrderedSet(Yakindu!Vertex) = OrderedSet{} | acc->union(r.vertices->asOrderedSet()))
 			top <- src.regions->collect(r|r.vertices)->flatten()
 		)
 }
