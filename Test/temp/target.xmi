@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <Male xmi:id="a08dbabc-da66-4c9c-8d84-4d9d6839c8cd" fullName="Jim March"/>
+  <Male xmi:id="4f47fbfa-681a-4934-8c62-ec6069e519e8" fullName="Brandon March"/>
+  <Male xmi:id="6e6bd4d8-7457-490b-b3f4-d99e866fed3e" fullName="Peter Sailor"/>
+  <Male xmi:id="3b48d0a0-e225-495c-a051-292a7b92d6a8" fullName="David Sailor"/>
+  <Male xmi:id="a4ce876d-a61e-4737-8c54-acd562951854" fullName="Dylan Sailor"/>
+  <Female xmi:id="d986f41b-1145-44d9-a39e-17c9ecfbff44" fullName="Cindy March"/>
+  <Female xmi:id="bc22c4fd-19f5-4d73-a96a-a7d7bd5aad2a" fullName="Brenda March"/>
+  <Female xmi:id="aef12b28-3306-4174-b877-ea323b156b1d" fullName="Jackie Sailor"/>
+  <Female xmi:id="31b3bb85-b1fe-43c9-9609-580b0153995f" fullName="Kelly Sailor"/>
+</xmi:XMI>

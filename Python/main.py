@@ -4,7 +4,6 @@ import torch
 
 #PyEcore
 from pyecore.resources import URI
-from pyecore.resources.resource import HttpURIConverter
 
 #Internal
 from graph.model2graph import Model2Graph
@@ -30,7 +29,7 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
   model_to_graph_target = Model2Graph(label="TGT")
   model_to_graph_target.get_graph_from_model(m_resource_target)
 
-  # merge the two graphs to be able to create trace links
+  # merge the two graphs
   merged_graph = model_to_graph_src.get_hetero_graph().update(model_to_graph_target.get_hetero_graph())
 
   # get the traces model to define the target edge_index (edge used for the link prediction)
@@ -58,12 +57,12 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
 metamodels = Metamodels(osp.join(RESOURCES_PATH, 'metamodels'))
 metamodels.register()
 
+# Get the resource set with the registered metamodels
 resource_set = metamodels.get_resource_set()
 
+# Set input and output directories
 directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
 directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
-
-resource_set.uri_mapper['file:' + RESOURCES_PATH] = RESOURCES_PATH
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
@@ -75,9 +74,6 @@ for subdir, dirs, files in oswalk(directory_input_src):
             xmi_path_traces = directory_input_target + DIR_SEP + "trace_" + file
             # just include in the graph when have all files (src, target and traces)
             if osp.isfile(xmi_path_target) and osp.isfile(xmi_path_traces):
-              print (xmi_path_src)
-              print (xmi_path_target)
-              print (xmi_path_traces)
               print (get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces))
 
 

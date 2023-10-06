@@ -2,20 +2,14 @@ package org.naomod.yakindu2satecharts;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.URIConverter;
-import org.eclipse.emf.ecore.resource.URIHandler;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.resource.impl.URIHandlerImpl;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.m2m.atl.emftvm.EmftvmFactory;
@@ -65,13 +59,13 @@ public class RunTransformations {
 
 		File InDir = new File("../resources/models/yakindu_input");
 
-		int i = 0;
+//		int i = 0;
 
 		for (File file : InDir.listFiles()) {
 
-			if (i > 1) {
-				break;
-			}
+//			if (i >= 1) {
+//				break;
+//			}
 
 			if (file.getName().toString().equals(".gitkeep")) {
 				continue;
@@ -111,17 +105,13 @@ public class RunTransformations {
 			env.run(td);
 			td.finish();
 
-			// options for save
-//			Map<String, Object> options = new HashMap<String, Object>();
-//			options.put(XMLResource., );
-
 			// Save models
 			inModel.getResource().save(Collections.emptyMap());
 			// TODO: Check the options for serialization
 			traceOutModel.getResource().save(Collections.emptyMap());
 			outModel.getResource().save(Collections.emptyMap());
 
-			i++;
+//			i++;
 
 		}
 	}

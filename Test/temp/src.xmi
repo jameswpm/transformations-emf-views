@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+  <ns0:Family xmlns:ns0="http://families" xmi:id="5fc23df1-e32a-4e31-a03d-38e42715d148" lastName="March">
+    <father xmi:id="1bc9eea2-4db3-4a7c-8684-6f43cf8dc513" firstName="Jim"/>
+    <mother xmi:id="0a755ba6-bbc7-4aab-bf59-7f0cdc72db91" firstName="Cindy"/>
+    <sons xmi:id="481c98b1-31fd-49ad-a4d2-8af3c32e1b51" firstName="Brandon"/>
+    <daughters xmi:id="a7ac285a-8a80-49c0-9adc-9b3c8f460b04" firstName="Brenda"/>
+  </ns0:Family>
+  <ns0:Family xmlns:ns0="http://families" xmi:id="59ec36b3-1d3a-4dd4-8de2-fc9238625a37" lastName="Sailor">
+    <father xmi:id="dd22e8e2-5885-4f5d-bc38-3b8590e26b0d" firstName="Peter"/>
+    <mother xmi:id="c6f35af8-3302-4250-8fab-fc157337046f" firstName="Jackie"/>
+    <sons xmi:id="ae41e31c-c508-44a9-a97c-3a23d4899572" firstName="David"/>
+    <sons xmi:id="019d537c-4f64-4cd0-9668-6b7e4bb838dd" firstName="Dylan"/>
+    <daughters xmi:id="bfb29228-9db1-4219-a904-64d4a7b9e494" firstName="Kelly"/>
+  </ns0:Family>
+</xmi:XMI>

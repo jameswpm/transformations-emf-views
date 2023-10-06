@@ -3,76 +3,76 @@
   <rules rule="Member2Male">
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@father"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@father"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/0"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/0"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@sons.0"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@sons.0"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/1"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/1"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@father"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@father"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/2"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/2"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@sons.0"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@sons.0"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/3"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/3"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@sons.1"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@sons.1"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/4"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/4"/>
       </targetElements>
     </links>
   </rules>
   <rules rule="Member2Female">
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@mother"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@mother"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/5"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/5"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@daughters.0"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/0/@daughters.0"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/6"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/6"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@mother"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@mother"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/7"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/7"/>
       </targetElements>
     </links>
     <links>
       <sourceElements name="s" defaultFor="/">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@daughters.0"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/sample-Families.xmi#/1/@daughters.0"/>
       </sourceElements>
       <targetElements name="t">
-        <object href="file:/C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/8"/>
+        <object href="C:/Users/James/Projects/Eclipse/transformations-emf-views/Java/../Test/persons.xmi#/8"/>
       </targetElements>
     </links>
   </rules>
