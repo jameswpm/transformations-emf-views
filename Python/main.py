@@ -34,8 +34,8 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
 
   # get the traces model to define the target edge_index (edge used for the link prediction)
   m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
-  m_resource_traces.use_uuid = True
-  m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
+  # m_resource_traces.use_uuid = True
+  # m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
 
   # Use the traces class to get a mapping of the traces by class
   traces = Traces(m_resource_traces)
@@ -51,7 +51,7 @@ def get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces):
 
   merged_graph['state', 'to', 'state'].edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
 
-  return merged_graph.edge_types
+  return merged_graph
 
 # Register the metamodels in the resource set
 metamodels = Metamodels(osp.join(RESOURCES_PATH, 'metamodels'))
@@ -63,6 +63,8 @@ resource_set = metamodels.get_resource_set()
 # Set input and output directories
 directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
 directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
+
+final_data = None
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
@@ -74,8 +76,12 @@ for subdir, dirs, files in oswalk(directory_input_src):
             xmi_path_traces = directory_input_target + DIR_SEP + "trace_" + file
             # just include in the graph when have all files (src, target and traces)
             if osp.isfile(xmi_path_target) and osp.isfile(xmi_path_traces):
-              print (get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces))
+              if not final_data:
+                 final_data = get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces)
+              else :
+                 final_data = final_data.update(get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces))
 
+print (final_data)
 
 exit()
 # Starts to create the necessary GNN code to deal with the graph

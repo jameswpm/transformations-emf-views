@@ -54,10 +54,10 @@ metamodels.register()
 # Get the resource set with the registered metamodels
 resource_set = metamodels.get_resource_set()
 
-xmi_path_src = osp.join(RESOURCES_PATH, 'yakindu_input', '100.xmi')
+xmi_path_src = osp.join(RESOURCES_PATH, 'yakindu_input', '101.xmi')
 #xmi_path_target = osp.join(RESOURCES_PATH, 'persons.xmi')
-xmi_path_target = osp.join(RESOURCES_PATH, 'statecharts_output', '100.xmi')
+xmi_path_target = osp.join(RESOURCES_PATH, 'statecharts_output', '101.xmi')
 # xmi_path_trace = osp.join(RESOURCES_PATH, 'traces.xmi')
-xmi_path_trace = osp.join(RESOURCES_PATH, 'statecharts_output', 'trace_100.xmi')
+xmi_path_trace = osp.join(RESOURCES_PATH, 'statecharts_output', 'trace_101.xmi')
 
 get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_trace)
