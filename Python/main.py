@@ -27,6 +27,9 @@ model_to_graph = Model2Graph()
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
+      if file != '100.xmi' and file != '101.xmi':
+         continue
+
       filepath = subdir + DIR_SEP + file
 
       if filepath.endswith(".xmi"):
@@ -61,8 +64,10 @@ for subdir, dirs, files in oswalk(directory_input_src):
             for src_uuid, target_uuid in mapping.items():
                 model_to_graph._add_edge('state|to|state',nodes_mapping[src_uuid],nodes_mapping[target_uuid])
 
-print (model_to_graph.get_hetero_graph())
 merged_graph = model_to_graph.get_hetero_graph()
+print (merged_graph.generate_ids())
+print (merged_graph['SRC-Statechart', 'regions', 'SRC-Region'])
+print(merged_graph.validate())
 
 exit()
 # Starts to create the necessary GNN code to deal with the graph

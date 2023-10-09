@@ -105,18 +105,46 @@ class Model2Graph():
     def get_hetero_graph(self):
         
         # Convert nodes to PyTorch tensors and set HeteroData
-        for node_type, node_list in self.nodes.items():
-            self.data[node_type].num_nodes = len(node_list)
-            self.data[node_type].node_id = torch.Tensor([item['id'] for item in node_list]).long()
+        # for node_type, node_list in self.nodes.items():
+        #     self.data[node_type].num_nodes = len(node_list)
+        #     self.data[node_type].node_id = torch.Tensor([item['id'] for item in node_list]).long()
 
-        # convert edges to PyTorch tensors
-        for edge_type, edge_list in self.edge_index.items():
-            src_name, rel_name, tgt_name = edge_type.split('|')
-            self.data[src_name, rel_name, tgt_name].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+        # # convert edges to PyTorch tensors
+        # for edge_type, edge_list in self.edge_index.items():
+        #     src_name, rel_name, tgt_name = edge_type.split('|')
+        #     self.data[src_name, rel_name, tgt_name].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
         
         #TODO: Attributes not needed for the first experiments with transformations
         # if consider_attributtes:
         #     # convert attributtes to PyTorch tensors
+
+        node_id_mapping = {}
+        for node_type, node_list in self.nodes.items():
+            num_nodes = len(node_list)
+            old_ids = [item['id'] for item in node_list]
+            new_ids = torch.arange(num_nodes, dtype=torch.long)
+            node_id_mapping[node_type] = dict(zip(old_ids, new_ids))
+
+        # Convert nodes to PyTorch tensors and set HeteroData with new node IDs
+        for node_type, node_list in self.nodes.items():
+            num_nodes = len(node_list)
+            self.data[node_type].num_nodes = num_nodes
+            self.data[node_type].node_id = torch.arange(num_nodes, dtype=torch.long)
+
+        # Convert edges to PyTorch tensors with updated node IDs
+        for edge_type, edge_list in self.edge_index.items():
+            src_name, rel_name, tgt_name = edge_type.split('|')
+            
+            # Map old node IDs to new node IDs
+            edge_list = [[node_id_mapping[src_name].get(src_id), node_id_mapping[tgt_name].get(tgt_id)] for src_id, tgt_id in edge_list]
+            
+            # Remove any edges with None (nodes that may have been removed)
+            edge_list = [edge for edge in edge_list if None not in edge]
+            
+            # Convert the updated edge list to a PyTorch tensor
+            edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+            
+            self.data[src_name, rel_name, tgt_name].edge_index = edge_index
 
         return self.data
     
