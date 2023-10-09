@@ -23,12 +23,10 @@ resource_set = metamodels.get_resource_set()
 directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
 directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
 
-final_data = None
 model_to_graph = Model2Graph()
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
-      
       filepath = subdir + DIR_SEP + file
 
       if filepath.endswith(".xmi"):
@@ -37,10 +35,9 @@ for subdir, dirs, files in oswalk(directory_input_src):
           xmi_path_traces = directory_input_target + DIR_SEP + "trace_" + file
           # just include in the graph when have all files (src, target and traces)
           if osp.isfile(xmi_path_target) and osp.isfile(xmi_path_traces):
-            #For each of main models, get the graph representation
+            #For each of main models, save resource with UUIDs at temporary directory
             m_resource_src = resource_set.get_resource(URI(xmi_path_src))
             m_resource_src.use_uuid = True
-            # #save resource with UUIDs at temporary directory
             m_resource_src.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'src.xmi')))
 
             model_to_graph.get_graph_from_model(m_resource_src, label="SRC")
@@ -49,38 +46,23 @@ for subdir, dirs, files in oswalk(directory_input_src):
             m_resource_target.use_uuid = True
             m_resource_target.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'target.xmi')))
 
-            # model_to_graph_src = Model2Graph(label="SRC")
-            # model_to_graph_src.get_graph_from_model(m_resource_src)
-
-            # model_to_graph_target = Model2Graph(label="TGT")
-            # model_to_graph_target.get_graph_from_model(m_resource_target)
             model_to_graph.get_graph_from_model(m_resource_target, label="TGT")
-
-            # merge the two graphs
-            # merged_graph = model_to_graph_src.get_hetero_graph().update(model_to_graph_target.get_hetero_graph())
 
             # get the traces model to define the target edge_index (edge used for the link prediction)
             m_resource_traces = resource_set.get_resource(URI(xmi_path_traces))
-            # m_resource_traces.use_uuid = True
-            # m_resource_traces.save(output=URI(osp.join(RESOURCES_PATH, 'models', 'temp', 'traces.xmi')))
 
             # Use the traces class to get a mapping of the traces by class
             traces = Traces(m_resource_traces)
             # TODO: State should not be hard-coded
             mapping = traces.get_mapping_traces('State')
 
-            #iterate over traces, adding the edge in the merged graph
-            # edges = []
+            #iterate over traces, adding the edges
             nodes_mapping = model_to_graph.get_mapping_nodes()
-            # right_nodes_mapping = model_to_graph_target.get_mapping_nodes()
             for src_uuid, target_uuid in mapping.items():
                 model_to_graph._add_edge('state|to|state',nodes_mapping[src_uuid],nodes_mapping[target_uuid])
-            # if not final_data:
-            #   final_data = get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces).get_hetero_graph()
-            # else :
-            #   final_data = final_data.update(get_graph_from_models(xmi_path_src, xmi_path_target, xmi_path_traces).get_hetero_graph())
 
 print (model_to_graph.get_hetero_graph())
+merged_graph = model_to_graph.get_hetero_graph()
 
 exit()
 # Starts to create the necessary GNN code to deal with the graph
