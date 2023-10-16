@@ -273,6 +273,9 @@ replay_pid*
 **/models/statecharts_output/**
 !**/models/statecharts_output/**/.gitkeep
 
+# Generated graph
+**/data/**
+
 #Figures
 # **/figures
 
