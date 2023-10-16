@@ -27,8 +27,8 @@ model_to_graph = Model2Graph()
     
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
-      if file != '100.xmi' and file != '101.xmi':
-         continue
+      # if file != '100.xmi' and file != '101.xmi':
+      #    continue
 
       filepath = subdir + DIR_SEP + file
 
@@ -60,13 +60,26 @@ for subdir, dirs, files in oswalk(directory_input_src):
             mapping = traces.get_mapping_traces('State')
 
             #iterate over traces, adding the edges
-            nodes_mapping = model_to_graph.get_mapping_nodes()
+            nodes_mapping = model_to_graph.get_nodes()
             for src_uuid, target_uuid in mapping.items():
-                model_to_graph._add_edge('state|to|state',nodes_mapping[src_uuid],nodes_mapping[target_uuid])
+                src_id = None
+                tgt_id = None
+                for node_type, node_list in nodes_mapping.items():
+                  src = next((item for item in node_list if item["uuid"] == src_uuid), None)
+                  tgt = next((item for item in node_list if item["uuid"] == target_uuid), None)
+                  if src is not None:
+                    src_type = node_type
+                    src_id = src['id']
+                  if tgt is not None:
+                    tgt_type = node_type
+                    tgt_id = tgt['id']
+                  if src_id is not None and tgt_id is not None:
+                     break
+
+                model_to_graph._add_edge(f'{src_type}|to|{tgt_type}', src_id, tgt_id)
 
 merged_graph = model_to_graph.get_hetero_graph()
-print (merged_graph.generate_ids())
-print (merged_graph['SRC-Statechart', 'regions', 'SRC-Region'])
+# merged_graph.generate_ids()
 print(merged_graph.validate())
 
 exit()
