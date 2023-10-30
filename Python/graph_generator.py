@@ -24,9 +24,13 @@ directory_input_src = osp.join(RESOURCES_PATH, 'models', 'yakindu_input')
 directory_input_target = osp.join(RESOURCES_PATH, 'models', 'statecharts_output')
 
 model_to_graph = Model2Graph()
-    
+
+i = 0
 for subdir, dirs, files in oswalk(directory_input_src):
     for file in files:
+
+      if i >= 10:
+         break
       
       filepath = subdir + DIR_SEP + file
 
@@ -75,10 +79,11 @@ for subdir, dirs, files in oswalk(directory_input_src):
                      break
 
                 model_to_graph._add_edge(f'{src_type}|to|{tgt_type}', src_id, tgt_id)
+      i += 1
 
 merged_graph = model_to_graph.get_hetero_graph()
 
 if merged_graph.validate():
    # Save the generated graph in a external file
    data_dir = osp.join(Path(__file__).parent, '..', 'data')
-   torch.save(merged_graph, data_dir + DIR_SEP + 'graph.pt')
+   torch.save(merged_graph, data_dir + DIR_SEP + 'graph_test.pt')

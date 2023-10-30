@@ -104,11 +104,17 @@ class Model2Graph():
     def get_hetero_graph(self):
         
         # Convert nodes to PyTorch tensors and set HeteroData
+        variable_assignment = "nodes = " + repr(self.nodes)
+        with open("nodes_assignment.py", "w") as file:
+            file.write(variable_assignment)
         for node_type, node_list in self.nodes.items():
             self.data[node_type].num_nodes = len(node_list)
             self.data[node_type].node_id = torch.Tensor([item['id'] for item in node_list]).long()
 
         # convert edges to PyTorch tensors
+        variable_assignment = "edge_index = " + repr(self.edge_index)
+        with open("edges_assignment.py", "w") as file:
+            file.write(variable_assignment)
         for edge_type, edge_list in self.edge_index.items():
             src_name, rel_name, tgt_name = edge_type.split('|')
             self.data[src_name, rel_name, tgt_name].edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
