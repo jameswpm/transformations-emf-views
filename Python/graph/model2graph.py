@@ -35,7 +35,7 @@ class Model2Graph():
             # Add node
             node_type = obj.eClass.name
             if label is not None:
-                node_type = f'{label}-{node_type}'
+                node_type = f'{label}_{node_type}'
             node_index = self._add_node(node_type, obj)       
 
             attributes = {}
@@ -58,7 +58,7 @@ class Model2Graph():
                                 continue
                             ref_obj_type = ref_obj.eClass.name
                             if label is not None:
-                                ref_obj_type = f'{label}-{ref_obj_type}'
+                                ref_obj_type = f'{label}_{ref_obj_type}'
                             ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                             # Add edge
@@ -76,7 +76,7 @@ class Model2Graph():
                             continue
                         ref_obj_type = ref_obj.eClass.name
                         if label is not None:
-                                ref_obj_type = f'{label}-{ref_obj_type}'
+                                ref_obj_type = f'{label}_{ref_obj_type}'
                         ref_node_index = self._add_node(ref_obj_type, ref_obj)
 
                         # Add edge

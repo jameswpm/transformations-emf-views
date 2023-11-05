@@ -3,10 +3,10 @@ from pathlib import Path
 
 # Starts to create the necessary GNN code to deal with the graph
 from torch_geometric.utils import (
-    remove_self_loops ,
+    remove_self_loops,
 )
 
-from sklearn.metrics import accuracy_score,roc_auc_score
+from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.metrics import precision_score
 from torch_geometric.transforms import RandomLinkSplit
 from torch_geometric.data import HeteroData
@@ -15,18 +15,18 @@ import torch_geometric.transforms as T
 import numpy as np
 from torch import nn
 # import networkx as nx
-from typing import List , Tuple
+from typing import List, Tuple
 from torch_geometric.nn import to_hetero
 import torch
 
 import matplotlib.pyplot as plt
-import torch_geometric.nn as  gnn
+import torch_geometric.nn as gnn
 
-if torch.cuda.is_available():  
-  dev = "cuda:0" 
-  print("gpu up")
-else:  
-  dev = "cpu"  
+if torch.cuda.is_available():
+    dev = "cuda:0"
+    print("gpu up")
+else:
+    dev = "cpu"
 device = torch.device(dev)
 
 DATA_PATH = osp.join(Path(__file__).parent, '..', 'data')
@@ -34,32 +34,44 @@ DATA_PATH = osp.join(Path(__file__).parent, '..', 'data')
 graph = torch.load(DATA_PATH + DIR_SEP + 'graph.pt')
 graph = T.ToUndirected()(graph)
 
-print (graph)
+if not graph.validate():
+    raise "The graph is not valid"
 
+transform = T.RandomLinkSplit(
+    is_undirected=False,
+    # using default PyG split
+    num_val=0.1,
+    num_test=0.2,
+    # Across the training edges, we use 65% of edges for message passing,
+    # and 35% of edges for supervision.
+    disjoint_train_ratio=0.35,
+    add_negative_train_samples=True,
+    edge_types=[('SRC_State', 'to', 'TGT_State')],
+    rev_edge_types=[('TGT_State', 'rev_to', 'SRC_State')]
+)
 
-# transform = RandomLinkSplit(
-#    is_undirected=False,
-#    add_negative_train_samples=True,
-#    disjoint_train_ratio=0.35,
-#    edge_types=[('SRC-State', 'to', 'TGT-State')],
-#    rev_edge_types=[('TGT-State', 'rev_to', 'SRC-State')])
+train_data, valid_data, test_data = transform(graph)
 
-# train,valid,test = transform(graph)
+# check the split of the target edge in the generated graphs
+# train_data visible message passing edges + train_data positive supervision edges + validation positive evaluation edges+test positive evaluation edges
+sum_edges = (len(train_data['SRC_State', 'to', 'TGT_State'].edge_index[0]) +
+             len(train_data['SRC_State', 'to', 'TGT_State'].edge_label) / 2 +
+             len(valid_data['SRC_State', 'to', 'TGT_State'].edge_label) / 2 +
+             len(test_data['SRC_State', 'to', 'TGT_State'].edge_label) / 2)
+# all existing target edges in the graph
+all_edges = len(graph['SRC_State', 'to', 'TGT_State'].edge_index[0])
 
-# #verify edge numbers
-# print(  
-#   len(train['SRC-State', 'to', 'TGT-State'].edge_index[0])+ # train visible message passing edges 
-#   len(train['SRC-State', 'to', 'TGT-State'].edge_label) /2  + # train positive supervision edges 
-#   len(valid['SRC-State', 'to', 'TGT-State'].edge_label) /2 +  # validation positive evaluation edges
-#   len(test['SRC-State', 'to', 'TGT-State'].edge_label) /2  )  # test positive evaluation edges
-# print(len(graph['SRC-State', 'to', 'TGT-State'].edge_index[0]) )  # all existing target edges in the graph
+if float(sum_edges) != float(all_edges):
+     raise f'The graph split is not valid. Sum of split: {sum_edges} and All edges: {all_edges}'
+
+print(graph)
 
 # class Encoder(nn.Module):
 #   """
-#   basic gnn with two layers to get representations for every node  
+#   basic gnn with two layers to get representations for every node
 #   """
 #   def __init__(self, node_dim=64):
-#     super(Encoder,self).__init__()   
+#     super(Encoder,self).__init__()
 #     self.gconv1  = gnn.SAGEConv((-1,-1), node_dim)
 #     self.gconv2  = gnn.SAGEConv((-1,-1), node_dim)
 
@@ -101,9 +113,9 @@ print (graph)
 #     for i in self.node_types.keys():
 #       xVectors[i] = self.node_types[i](nodes[i])
 #     return self.hetero_encoder(xVectors, edges)
-    
+
 #   def decode(self,h,edge_label_index):
-    
+
 #     return self.decoder(h,edge_label_index)
 
 #   def recon_loss(self, z, pos_edge_index, neg_edge_index):
@@ -119,7 +131,7 @@ print (graph)
 #         # pos_edge_index, _ = remove_self_loops(pos_edge_index)
 #         # pos_edge_index, _ = add_self_loops(pos_edge_index)
 #         neg_edge_index, _ = remove_self_loops(neg_edge_index)
-        
+
 #         neg_loss = -torch.log(1 -
 #                               self.decode(z, neg_edge_index) +
 #                               EPS).mean()
@@ -165,7 +177,7 @@ print (graph)
 #     optimizer.step()
 #     auc, p ,acc= myGAE.test(h, train['SRC-State', 'to', 'TGT-State'].edge_label_index,train['SRC-State', 'to', 'TGT-State'].edge_label)
 #     # print(i,"train", np.array([auc, p , acc]).round(3),end=' ')
-    
+
 #     with torch.no_grad():
 #       myGAE.eval()
 #       test.to(device)

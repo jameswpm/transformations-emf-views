@@ -86,4 +86,4 @@ merged_graph = model_to_graph.get_hetero_graph()
 if merged_graph.validate():
    # Save the generated graph in a external file
    data_dir = osp.join(Path(__file__).parent, '..', 'data')
-   torch.save(merged_graph, data_dir + DIR_SEP + 'graph_test.pt')
+   torch.save(merged_graph, data_dir + DIR_SEP + 'graph.pt')
