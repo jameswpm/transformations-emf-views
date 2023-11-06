@@ -2,25 +2,19 @@ from os import sep as DIR_SEP, path as osp
 from pathlib import Path
 
 # Starts to create the necessary GNN code to deal with the graph
-from torch_geometric.utils import (
-    remove_self_loops,
-)
 
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.metrics import precision_score
-from torch_geometric.transforms import RandomLinkSplit
-from torch_geometric.data import HeteroData
 import torch_geometric.transforms as T
+import torch.nn.functional as F
 
 import numpy as np
-from torch import nn
-# import networkx as nx
-from typing import List, Tuple
-from torch_geometric.nn import to_hetero
+from torch.nn import Embedding
+from torch_geometric.nn import to_hetero, SAGEConv
+from torch import Tensor
 import torch
 
 import matplotlib.pyplot as plt
-import torch_geometric.nn as gnn
 
 if torch.cuda.is_available():
     dev = "cuda:0"
@@ -66,129 +60,123 @@ if float(sum_edges) != float(all_edges):
 
 print(graph)
 
-# class Encoder(nn.Module):
-#   """
-#   basic gnn with two layers to get representations for every node
-#   """
-#   def __init__(self, node_dim=64):
-#     super(Encoder,self).__init__()
-#     self.gconv1  = gnn.SAGEConv((-1,-1), node_dim)
-#     self.gconv2  = gnn.SAGEConv((-1,-1), node_dim)
+"""
+Definition of the GNN with the SageConv Layers and the Classifier using dot-product
+"""
+class GNN(torch.nn.Module):
+    def __init__(self, hidden_channels):
+        super().__init__()
+        self.conv1 = SAGEConv((-1,-1), hidden_channels)
+        self.conv2 = SAGEConv((-1,-1), hidden_channels)
 
-#   def forward(self, x, edge_index):
-#     h = self.gconv1(x, edge_index).relu()
-#     h = self.gconv2(h, edge_index)
-#     return h
+    def forward(self, x: Tensor, edge_index: Tensor) -> Tensor:
+        # A 2-layer GNN computation graph.
+        # `ReLU` is the non-lineary function used in-between.
+        x = self.conv1(x, edge_index).relu()
+        x = self.conv2(x, edge_index)
+        return x
 
-# EPS = 1e-15
+class Classifier(torch.nn.Module):
+    def forward(self, x_i: Tensor, x_j: Tensor, edge_label_index: Tensor) -> Tensor:
+        # Convert node embeddings to edge-level representations:
+        edge_feat_a = x_i[edge_label_index[0]]
+        edge_feat_b = x_j[edge_label_index[1]]
 
-# class EdgeDecoder(torch.nn.Module):
-#     def __init__(self, hidden_channels):
-#         super().__init__()
-#         self.lin1 = nn.Linear(2 * hidden_channels, hidden_channels)
-#         self.lin2 = nn.Linear(hidden_channels, 1)
-
-#     def forward(self, z_dict, edge_label_index):
-#         z = torch.cat([z_dict['SRC-State'][edge_label_index[0]], z_dict['TGT-State'][edge_label_index[1]]], dim=-1)
-
-#         z = self.lin1(z).relu()
-#         z = self.lin2(z).sigmoid()
-#         return z.view(-1)
+        # Apply dot-product to get a prediction per supervision edge:
+        return (edge_feat_a * edge_feat_b ).sum(dim=-1)
 
 
-# class MyGAE(nn.Module):
+class Model(torch.nn.Module):
+    def __init__(self, hidden_channels):
+        super().__init__()
+        # initial embeddings
+        self.node_types = {}
+        for n in graph.node_types:
+            self.node_types[n]  = Embedding(graph[n].num_nodes, hidden_channels)
+            self.node_types[n].to(device)
 
-#   def __init__(self, encoder,decoder, data:HeteroData, node_types:List[Tuple], node_dim:int):
+        # Instantiate homogeneous GNN:
+        self.gnn = GNN(hidden_channels)
 
-#     super(MyGAE,self).__init__()
-#     self.node_types = {}
-#     for n in node_types:
-#       self.node_types[n[0]]  = nn.Embedding(n[1], node_dim) # this part is redundant(we can use embeddings from torch geometric directly)
-#       self.node_types[n[0]].to(device)
-#     self.hetero_encoder = to_hetero(encoder, data.metadata())
-#     self.decoder = decoder
+        # Convert GNN model into a heterogeneous variant:
+        self.gnn = to_hetero(self.gnn, metadata=graph.metadata())
 
-#   def encode(self, nodes, edges):
-#     xVectors= {}
-#     for i in self.node_types.keys():
-#       xVectors[i] = self.node_types[i](nodes[i])
-#     return self.hetero_encoder(xVectors, edges)
+        self.classifier = Classifier()
 
-#   def decode(self,h,edge_label_index):
+    def forward(self, data) -> Tensor:
+        x_dict = {}
+        for i in self.node_types.keys():
+            input_tensor = data[i].node_id
+            if not torch.all(input_tensor >= 0) or not torch.all(input_tensor < self.node_types[i].num_embeddings):
+                # Using torch.clamp() to clamp the indices to the valid range when the node tensor is wrong defined.
+                input_tensor = torch.clamp(input_tensor, 0, self.node_types[i].num_embeddings - 1)
+            x_dict[i] = self.node_types[i](input_tensor)
 
-#     return self.decoder(h,edge_label_index)
+        # `x_dict` holds feature matrices of all node types
+        # `edge_index_dict` holds all edge indices of all edge types
+        x_dict = self.gnn(x_dict, data.edge_index_dict)
 
-#   def recon_loss(self, z, pos_edge_index, neg_edge_index):
-#         r"""Given latent variables :obj:`z`, computes the binary cross
-#         entropy loss for positive edges :obj:`pos_edge_index` and negative
-#         sampled edges.
-#         """
+        pred = self.classifier(
+            x_dict["SRC_State"],
+            x_dict["TGT_State"],
+            data['SRC_State', 'to', 'TGT_State'].edge_label_index,
+        )
 
-#         pos_loss = -torch.log(
-#             self.decode(z, pos_edge_index) + EPS).mean()
+        return pred
 
-#         # Do not include self-loops in negative samples
-#         # pos_edge_index, _ = remove_self_loops(pos_edge_index)
-#         # pos_edge_index, _ = add_self_loops(pos_edge_index)
-#         neg_edge_index, _ = remove_self_loops(neg_edge_index)
+model = Model(hidden_channels=64)
 
-#         neg_loss = -torch.log(1 -
-#                               self.decode(z, neg_edge_index) +
-#                               EPS).mean()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+train_losses=[]
+total_loss = 0
+total_examples = 0
 
-#         return pos_loss + neg_loss
+def train():
+    global train_losses
+    global total_loss
+    global total_examples
 
-#   def test(self,z, edge_index, y ):
-#     r"""Given latent variables :obj:`z`, edges
-#     computes area under the ROC curve (AUC) , average precision (AP)
-#     and (Acc) accuracy scores  .
-#     Args:
-#         z (Tensor): The latent space :math:`\mathbf{Z}`.
-#         edge_index (LongTensor):   edges
-#         y  (Tensor):labels
-#     """
-#     pred =  self.decode(z, edge_index,)
+    model.train()
+    optimizer.zero_grad()
 
-#     y, pred = y.detach().cpu().numpy(), pred.detach().cpu().numpy()
+    # Run `forward` pass of the model
+    pred = model.forward(train_data)
+    # Apply binary cross entropy
+    loss = F.binary_cross_entropy_with_logits(pred, train_data['SRC_State', 'to', 'TGT_State'].edge_label)
 
-#     return roc_auc_score(y, pred), precision_score(y, pred>=0.5), accuracy_score(y,pred>0.5)
+    train_losses += [loss]
 
-# node_types = [("SRC-State", 2473), ("TGT-State", 5343)]
+    loss.backward()
+    optimizer.step()
+    total_loss += float(loss) * pred.numel()
+    total_examples += pred.numel()
+    return float(loss)
 
-# myGAE = MyGAE(Encoder(), EdgeDecoder(64), graph, node_types, node_dim=64)
-# myGAE.to(device)
-# train = train.to(device)
-# with torch.no_grad():
-#     myGAE.encode(train.x_dict, train.edge_index_dict)
+preds = []
+ground_truths = []
 
-# optimizer = torch.optim.Adam(myGAE.parameters(), lr=0.01, weight_decay=0.0005)
+@torch.no_grad()
+def test(data):
+    model.eval()
 
-# validationMetrics = []
-# for i in range(40):
-#     myGAE.train()
-#     optimizer.zero_grad()
-#     # pred = myGAE(train.x_dict, train.edge_index_dict,
-#     #              train['Gene', "associates",'Disease'].edge_label_index)
-#     target = train['SRC-State', 'to', 'TGT-State'].edge_label
-#     label_edge_index = train['SRC-State', 'to', 'TGT-State'].edge_label_index
-#     h = myGAE.encode(train.x_dict,train.edge_index_dict)
-#     loss  = myGAE.recon_loss(h,label_edge_index[:,target==1],label_edge_index[:,target==0])
-#     loss.backward()
-#     optimizer.step()
-#     auc, p ,acc= myGAE.test(h, train['SRC-State', 'to', 'TGT-State'].edge_label_index,train['SRC-State', 'to', 'TGT-State'].edge_label)
-#     # print(i,"train", np.array([auc, p , acc]).round(3),end=' ')
+    # Run `forward` pass of the model to get the prediction
+    pred_itr = model.forward(data)
 
-#     with torch.no_grad():
-#       myGAE.eval()
-#       test.to(device)
-#       z = myGAE.encode(test.x_dict,test.edge_index_dict)
-#       auc, p ,acc= myGAE.test(z, test['SRC-State', 'to', 'TGT-State'].edge_label_index,test['SRC-State', 'to', 'TGT-State'].edge_label)
-#       # auc, p = myGAE.test(z, valid.edge_label_index[:,valid.edge_label==1],valid.edge_label_index[:,valid.edge_label==0])
-#       # print("valid",np.array([auc, p , acc]).round(3))
-#       validationMetrics.append([auc, p , acc])
+    ground_truth_itr = data['SRC_State', 'to', 'TGT_State'].edge_label
+    preds.append(pred_itr)
+    ground_truths.append(ground_truth_itr)
+    auc = roc_auc_score(ground_truth_itr, pred_itr)
+    return float(auc)
 
-# plt.plot(np.arange(len(validationMetrics)),np.array(validationMetrics)[:,0],label='auc')
-# plt.plot(np.arange(len(validationMetrics)),np.array(validationMetrics)[:,1],label='precision')
-# plt.plot(np.arange(len(validationMetrics)),np.array(validationMetrics)[:,2],label='acc')
-# plt.legend()
-# plt.show()
+
+for epoch in range(1, 6):
+    loss = train()
+    train_rmse = test(train_data)
+    val_rmse = test(valid_data)
+    test_rmse = test(test_data)
+    # Add checks to handle potential None values
+    if loss is not None and train_rmse is not None and val_rmse is not None and test_rmse is not None:
+        print(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_rmse:.4f}, '
+              f'Val: {val_rmse:.4f}, Test: {test_rmse:.4f}')
+    else:
+        print(f'Epoch: {epoch:03d}, Some values are None.')

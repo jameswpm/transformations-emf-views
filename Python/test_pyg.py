@@ -325,7 +325,10 @@ class Model(torch.nn.Module):
     def forward(self, data) -> Tensor:
         x_dict = {}
         for i in self.node_types.keys():
-            x_dict[i] = self.node_types[i](data[i].node_id)
+            input_tensor = data[i].node_id
+            # Using torch.clamp() to clamp the indices to the valid range.
+            input_tensor_clamped = torch.clamp(input_tensor, 0, self.node_types[i].num_embeddings - 1)
+            x_dict[i] = self.node_types[i](input_tensor_clamped)
 
         # `x_dict` holds feature matrices of all node types
         # `edge_index_dict` holds all edge indices of all edge types
